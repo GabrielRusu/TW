@@ -1,5 +1,5 @@
 package example;
-
+/*
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.xml.DOMConfigurator;
 
@@ -61,4 +61,4 @@ public class AppContextListener implements ServletContextListener {
         }
     }
 
-}
+}*/
