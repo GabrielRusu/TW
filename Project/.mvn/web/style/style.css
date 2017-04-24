@@ -1,13 +1,29 @@
 
+
+html, body, div, p, img, table, menu, header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 body {
 	font: normal .80em arial, sans-serif;
 	color: #1D1D1D;
 }
  
- /* Sidebar pe care il vom folosi ca meniu
- */
+	#header {
+		width: 100%;
+		position: fixed;
+		background: #ffffff;
+		height: 5%;
+		z-index: 2;
+	}
+ 
 	#sidebar {
-		background: url(../images/sidebar.jpg);
+		background: #eee url(../images/sidebar.jpg);
 		height: 100vh;
 		top: 0;
 		left: 0;
@@ -47,10 +63,27 @@ body {
 	}
 
 	#main {
-		background: url(../images/main.jpg) repeat-x;
+		background: url(../images/main.jpg) repeat-x ;background-attachment: fixed;
 		position: relative;
-		transition: margin-left .5s;
+		transition: 0.5s;
 		padding: 20px;
+	}
+	
+	.article {
+		background: url(../images/article.jpg) repeat-x;
+		margin-left: 5%;
+		margin-bottom: 5%;
+		border-left: 1px solid gray;
+		padding: 1em;
+		overflow: hidden;
+	}
+	
+	.article-intro {
+		background: none;
+		margin-left: 5%;
+		margin-bottom: 5%;
+		padding: 1em;
+		overflow: hidden;
 	}
 	
 	#sidebar + #main {
