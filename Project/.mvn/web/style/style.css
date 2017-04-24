@@ -1,4 +1,59 @@
 
-body
-{ font: normal .80em arial, sans-serif;
-  color: #1D1D1D;}
+body {
+	font: normal .80em arial, sans-serif;
+	color: #1D1D1D;
+}
+ 
+ /* Sidebar pe care il vom folosi ca meniu
+ */
+	#sidebar {
+		background: url(../images/sidebar.jpg);
+		height: 100vh;
+		top: 0;
+		left: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: fixed;
+		text-align: right;
+		width: 15%;
+		z-index: 1;
+		transition: 0.5s;
+	}
+
+		#sidebar a {
+			font-size: 25px;
+			color: #ffffff;
+			padding: 30% 10px 5px;
+			text-decoration: none;
+			display: block;
+			transition: 0.3s;
+		}
+		
+		#sidebar a:hover {
+			color: #000000;
+		}
+		
+		#sidebar a:active {
+			color: #ffff00;
+		}
+	
+		#sidebar > .menu {
+			color: #ffff00;
+		}
+	
+	@media screen and (max-height: 450px) {
+    #sidebar  {padding-top: 15px;}
+    #sidebar a {font-size: 18px;}
+	}
+
+	#main {
+		background: url(../images/main.jpg) repeat-x;
+		position: relative;
+		transition: margin-left .5s;
+		padding: 20px;
+	}
+	
+	#sidebar + #main {
+		margin-left: 15%;
+	}
+
