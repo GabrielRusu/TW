@@ -9,7 +9,7 @@ public class DBConnectionManager {
     private Connection connection;
 
     public DBConnectionManager(String dbURL, String user, String pwd) throws ClassNotFoundException, SQLException{
-        Class.forName("oracle.jdbc.driver.OracleDriver");
+        //Class.forName("oracle.jdbc.driver.OracleDriver");
         this.connection = DriverManager.getConnection(dbURL, user, pwd);
     }
 
