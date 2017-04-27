@@ -50,12 +50,13 @@ body {
 	
 	#header {
 		background: #eee url(../images/sidebar.png);
-		height: 90px;
+		height: 60px;
 		top: 0;
 		left: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
 		text-align: center;
+		padding-top: 30px;
 		width: 100%;
 		z-index: 1;
 		transition: 0.5s;
@@ -65,9 +66,7 @@ body {
 			font-size: 25px;
 			color: #ffffff;
 			padding-right:5%;
-			padding-top:5%;
 			text-decoration: none;
-			display: line;
 			transition: 0.3s;
 		}
 			
@@ -76,13 +75,42 @@ body {
 		}
 		
 		#header a:active {
-			color: #ffff00;
+			color: #600000;
 		}
 	
-		#header > .menu {
-			color: #ffff00;
+
+ 	#view {
+		background: #eee url(../images/article.png);
+		margin-left: 35%;
+		height: 25px;
+		top: 0;
+		left: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		text-align: center;
+		padding-top: 10px;
+		width: 30%;
+		z-index: 1;
+		transition: 0.5s;
+	}
+	
+	#view a {
+			font-size: 15px;
+			color: #ffffff;
+			padding-right:5%;
+			text-decoration: none;
+			transition: 0.3s;
+		}
+			
+		#view a:hover {
+			color: #900000;
+		}
+		
+		#view a:active {
+			color: #600000;
 		}
 
+	
  
 	#sidebar {
 		background: #eee url(../images/sidebar.png);
@@ -107,17 +135,13 @@ body {
 			display: block;
 			transition: 0.3s;
 		}
-			
+		
 		#sidebar a:hover {
 			color: #000000;
 		}
 		
 		#sidebar a:active {
 			color: #600000;
-		}
-	
-		#sidebar > .menu {
-			color: #ffff00;
 		}
 
 	#main {
@@ -128,7 +152,7 @@ body {
 	}
 	
 	#main-app {
-		background: url(../images/article.png) repeat-x; background-attachment: fixed;
+		background: url(../images/background.png) repeat-x; background-attachment: fixed;
 		position: relative;
 		transition: 0.5s;
 		height: 100%;
@@ -140,23 +164,21 @@ body {
 	}
 
 		table tr {
-			border: solid 3px rgba(255, 255, 255, 0.3);
-			background-color: #000000;
+			background: rgba(255, 255, 255, 0.1);
 		}
-		
+		/*
 		tr:nth-child(odd) td:nth-child(even) {
 			background-color: #600000;
   
-		}
+		}*/
 
 		table td {
 			padding: 0.75em 0.75em;
 		}
-		
+		/*
 		tr:nth-child(even) td:nth-child(odd) {
 			background-color: #600000;
-		}
-	
+		}*/
 	
 	#map {
         height: 500px;
