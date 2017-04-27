@@ -4,15 +4,21 @@
 <html>
 <head>
   <title>INepal</title>
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/main.css" />
+  <link rel="stylesheet" media="media screen and (min-width: 641) and (max-width: 800)" href="style/tablet.css">
+  <link rel="stylesheet" media="media screen and (min-width: 451) and (max-width: 640)" href="style/phone.css">
+  <link rel="stylesheet" media="media screen and (max-width: 450px)" href="style/small.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="scripts/sidebar.js"></script>
+  <script src="scripts/charts.js" ></script>
 </head>
 <body>
 	 
 	<div id="sidebar">
 		<div class="menu">
 			<!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
-			<a href = "#intro">TITLU CEVA</a> 
+			<a href = "#intro">INTRODUCERE</a> 
 			<a href = "#first">DETALII</a>
 			<a href = "#second">APLICATII</a>
 			<a href = "#third">FINAL</a> 
@@ -25,7 +31,7 @@
 		<section id="intro">
 		<div class="article-intro">
 			<ul>
-				<h1>TITLU CEVA</h1>
+				<h1>INTRODUCERE</h1>
 				<p> <h2>Ne plac copacii</h2></p>
 				<p> <h2>Si ardem lemne</h2></p>
 				<p> <h2>Ne arde soarele</h2></p>
@@ -69,6 +75,31 @@
 		<div class="article">
 			<ul>
 				<p> <h1>APLICATII</h1></p>
+				
+				<table>
+					<tr> 
+						<td> <h3> Tabel </h3> 
+							<p> <h4> Afiseaza informatiile dorite intr-un tabel si filtreaza informatiile dupa nume,
+								alege doar cateva coloane etc. </h4> </p>
+						</td> 
+						
+						<td> <h3> Grafic </h3> 
+							<p> <h4> Afiseaza informatiile dorite intr-un tabel si filtreaza informatiile dupa nume,
+								alege doar cateva coloane etc. </h4> </p>
+						</td> 
+					</tr>
+					<tr>
+						<td> <h3> Chart </h3> 
+							<p> <h4> Afiseaza informatiile dorite intr-un tabel si filtreaza informatiile dupa nume,
+								alege doar cateva coloane etc. </h4> </p>
+						</td> 
+						<td> <h3> Harta </h3> 
+						<p> <h4> Afiseaza informatiile dorite intr-un tabel si filtreaza informatiile dupa nume,
+								alege doar cateva coloane etc. </h4> </p>
+						</td>
+					</tr>
+				</table>
+				
 				<div class ="container">
 					<div id="map"></div>
 					
@@ -77,6 +108,16 @@
 					</script>
 					
 				</div>
+				
+				<div class ="container">
+					<div id="chart_div"></div>
+					
+					<script asynx defer
+					src="https://www.gstatic.com/charts/loader.js">
+					</script>
+					
+				</div>
+				
 			</ul>
 		</div>
 	</section>
