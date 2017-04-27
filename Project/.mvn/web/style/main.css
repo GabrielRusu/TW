@@ -18,19 +18,19 @@ h1 {
 
 h2 {
 	font: 32px arial, sans-serif;
-	color: #1ff1ee;
+	color: #f7f7f7;
 	padding-bottom: 15px;
 }
 
 h3 {
 	font: 32px arial, sans-serif;
-	color: #1ff1ee;
+	color: #f7f7f7;
 	padding-bottom: 15px;
 }
 
 h4 {
 	font: 22px arial, sans-serif;
-	color: #1ffeee;
+	color: #f7f7f7;
 }
  
 
@@ -47,14 +47,42 @@ body {
 	font: normal .80em arial, sans-serif;
 	color: #1D1D1D;
 }
- 
+	
 	#header {
-		width: 100%;
-		position: fixed;
-		background: #ffffff;
+		background: #eee url(../images/sidebar.png);
 		height: 90px;
-		z-index: 2;
+		top: 0;
+		left: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		text-align: center;
+		width: 100%;
+		z-index: 1;
+		transition: 0.5s;
 	}
+
+		#header a {
+			font-size: 25px;
+			color: #ffffff;
+			padding-right:5%;
+			padding-top:5%;
+			text-decoration: none;
+			display: line;
+			transition: 0.3s;
+		}
+			
+		#header a:hover {
+			color: #000000;
+		}
+		
+		#header a:active {
+			color: #ffff00;
+		}
+	
+		#header > .menu {
+			color: #ffff00;
+		}
+
  
 	#sidebar {
 		background: #eee url(../images/sidebar.png);
@@ -85,16 +113,7 @@ body {
 		}
 		
 		#sidebar a:active {
-			color: #ffff00;
-		}
-		
-		#sidebar a:before {
-			color: #000000;
-			background: #3c2c62;
-		}
-		
-		#sidebar a:after {
-			color: #ffff00;
+			color: #600000;
 		}
 	
 		#sidebar > .menu {
@@ -108,20 +127,25 @@ body {
 		margin-left: 270px;
 	}
 	
+	#main-app {
+		background: url(../images/article.png) repeat-x; background-attachment: fixed;
+		position: relative;
+		transition: 0.5s;
+		height: 100%;
+	}
+	
 	table {
-		/*border-width: 5px;  
-		border-style: none;
-		border-color: black;*/
 		margin: 0 0 2em 0;
 		width: 95%;
 	}
 
 		table tr {
-			border: solid 3px rgba(255, 255, 255, 0.8);
+			border: solid 3px rgba(255, 255, 255, 0.3);
+			background-color: #000000;
 		}
 		
 		tr:nth-child(odd) td:nth-child(even) {
-			background: fff000;
+			background-color: #600000;
   
 		}
 
@@ -130,13 +154,13 @@ body {
 		}
 		
 		tr:nth-child(even) td:nth-child(odd) {
-			background: ff00ff;
+			background-color: #600000;
 		}
 	
 	
 	#map {
-        height: 400px;
-        width: 95%;
+        height: 500px;
+        width: 100%;
 		background: ffffff;
        }
 	
@@ -144,6 +168,23 @@ body {
 		background: url(../images/article.png);
 		overflow: hidden;
 	}
+	
+	.article a {
+			font-size: 25px;
+			color: #ffffff;
+			padding: 5px 5px 5px;
+			text-decoration: none;
+			display: block;
+			transition: 0.2s;
+		}
+			
+		.article a:hover {
+			color: #000000;
+		}
+		
+		.article a:active {
+			color: #ffff00;
+		}
 	
 	.article-intro {
 		background: none;
@@ -189,5 +230,15 @@ body {
 	h2 {font: 16px arial, sans-serif;}
 	h3 {font: 16px arial, sans-serif;}
 	h4 {font: 11px arial, sans-serif;}
+	}
+	
+	@media screen and (max-width: 320px) {
+	#main {margin-left: 65px;}
+	#sidebar {width: 65px;}
+    #sidebar a {font-size: 7px;}
+	h1 {font: bold 16px arial, sans-serif;}
+	h2 {font: 8px arial, sans-serif;}
+	h3 {font: 8px arial, sans-serif;}
+	h4 {font: 5px arial, sans-serif;}
 	}
 	
