@@ -110,8 +110,6 @@ body {
 			color: #600000;
 		}
 
-	
- 
 	#sidebar {
 		background: #eee url(../images/sidebar.png);
 		height: 100vh;
@@ -185,6 +183,12 @@ body {
         width: 100%;
 		background: ffffff;
        }
+	   
+	#chart-div {
+		height: 500px;
+        width: 100%;
+		background: ffffff;
+	}
 	
 	.article {
 		background: url(../images/article.png);
@@ -216,6 +220,9 @@ body {
 	
 	@media screen and (max-width: 1080px) {
 	#main {margin-left: 230px;}
+	#header {height: 55px; padding-top: 27px;}
+    #header a {font-size: 23px;}
+    #view a {font-size: 14px;}
 	#sidebar {width: 230px;}
     #sidebar a {font-size: 23px;}
 	h1 {font: bold 56px arial, sans-serif;}
@@ -226,6 +233,9 @@ body {
 	
 	@media screen and (max-width: 900px) {
 	#main {margin-left: 175px;}
+	#header {height: 50px; padding-top: 25px;}
+    #header a {font-size: 18px;}
+    #view a {font-size: 12px;}
 	#sidebar {width: 175px;}
     #sidebar a {font-size: 18px;}
 	h1 {font: bold 48px arial, sans-serif;}
@@ -236,6 +246,9 @@ body {
 	
 	@media screen and (max-width: 720px) {
 	#main {margin-left: 150px;}
+	#header {height: 45px; padding-top: 22px;}
+    #header a {font-size: 14px;}
+    #view a {font-size: 10px;}
 	#sidebar {width: 150px;}
     #sidebar a {font-size: 14px;}
 	h1 {font: bold 40px arial, sans-serif;}
@@ -246,6 +259,9 @@ body {
 	
 	@media screen and (max-width: 640px) {
 	#main {margin-left: 130px;}
+	#header {height: 40px; padding-top: 20px;}
+    #header a {font-size: 13px;}
+    #view a {font-size: 9px;}
 	#sidebar {width: 130px;}
     #sidebar a {font-size: 13px;}
 	h1 {font: bold 32px arial, sans-serif;}
@@ -256,6 +272,9 @@ body {
 	
 	@media screen and (max-width: 320px) {
 	#main {margin-left: 65px;}
+	#header {height: 35px; padding-top: 17px;}
+    #header a {font-size: 7px;}
+    #view a {font-size: 5px;}
 	#sidebar {width: 65px;}
     #sidebar a {font-size: 7px;}
 	h1 {font: bold 16px arial, sans-serif;}
