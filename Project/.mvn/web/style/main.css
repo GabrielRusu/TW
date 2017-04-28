@@ -119,7 +119,6 @@ body {
 		overflow-y: auto;
 		position: fixed;
 		text-align: right;
-		padding-top: 6%;
 		width: 270px;
 		z-index: 1;
 		transition: 0.5s;
