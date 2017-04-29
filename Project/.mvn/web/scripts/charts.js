@@ -21,8 +21,8 @@ data.addRows([
 
 // Set chart options
 var options = {'title':'Affected zones',
-			   'width':900,
-			   'height':500};
+			   'width':"70%",
+			   'height':"60%"};
 
 // Instantiate and draw our chart, passing in some options.
 var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
