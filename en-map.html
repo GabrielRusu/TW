@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+  <title>INepal</title>
+  <link rel="stylesheet" type="text/css" href="style/main.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="scripts/sidebar.js"></script>
+  <script src="scripts/charts.js" ></script>
+</head>
+<body>
+	 
+	<div id="header">
+		<div class="menu">
+			<!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+			<a href = "en-index.html#intro">INTRODUCTION</a> 
+			<a href = "en-index.html#first">DETAILS</a>
+			<a href = "en-index.html#second">APLICATIONS</a>
+			<a href = "en-index.html#third">FINALY</a> 
+		</div>
+	</div>
+	 
+	<div id="main-app">
+		<!--<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>-->
+		
+		<div id="view">
+				<a href = "en-table.html">Table</a> 
+				<a href = "en-grafic.html">Graphic</a>
+				<a href = "en-chart.html">Chart</a>
+				<a href = "en-map.html">Map</a>
+			</div>
+		
+		<section id="intro">
+		<div class="article-intro">
+
+			<div class ="container">
+				<div id="map"></div>
+				
+				<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABxkncQ2p_Qqgzalrjvb-d-0sOKvlHvJE&callback=initMap">
+				</script>
+					
+			</div>
+			
+			<h3>MAP</h3>
+			<p> <h2>You are now visualising the data as MAP.</h2></p>
+			<p> <h2>Using this method you can see the most affected areas.</h2></p>
+			<p> <h2>You can export the chart in the following formats: .png sau .jpg</h2></p>
+
+			<div id="view">
+				<a href = "">PNG</a> 
+				<a href = "">JPG</a>
+			</div>
+			
+		</div>
+		</section>
+				
+	
+	</div>
+	 
+</body>
+</html>
