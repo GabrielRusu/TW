@@ -1,0 +1,435 @@
+
+h1, h2, h3 {
+    font: bold 200% arial, sans-serif;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin: 0 0 0px 0;
+    padding: 15px 0 0 0;
+}
+
+h1 {
+    font: bold 64px arial, sans-serif;
+    padding: 0 0 5px 0;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+h2 {
+    font: 32px arial, sans-serif;
+    color: #f7f7f7;
+    padding-bottom: 15px;
+}
+
+h3 {
+    font: 32px arial, sans-serif;
+    color: #f7f7f7;
+    padding-bottom: 15px;
+}
+
+h4 {
+    font: 22px arial, sans-serif;
+    color: #f7f7f7;
+}
+
+html, body, div, p, img, table, menu, header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font: normal .80em arial, sans-serif;
+    color: #1D1D1D;
+}
+
+#header {
+    background: #eee url(images/sidebar.png);
+    height: 60px;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding-top: 30px;
+    width: 100%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+#header a {
+    font-size: 25px;
+    color: #ffffff;
+    padding-right: 5%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#header a:hover {
+    color: #000000;
+}
+
+#header a:active {
+    color: #600000;
+}
+
+#view {
+    background: #eee url(images/article.png);
+    margin-left: 35%;
+    height: 25px;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding-top: 10px;
+    width: 40%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+#view a {
+    font-size: 15px;
+    color: #ffffff;
+    padding-right: 5%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#view a:hover {
+    color: #900000;
+}
+
+#view a:active {
+    color: #600000;
+}
+
+#sidebar {
+    background: #eee url(images/sidebar.png);
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    text-align: right;
+    width: 270px;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+#sidebar a {
+    font-size: 25px;
+    color: #ffffff;
+    padding: 30% 15% 5px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    color: #000000;
+}
+
+#sidebar a:active {
+    color: #600000;
+}
+
+#main {
+    background: url(images/background.png) repeat-x;
+    background-attachment: fixed;
+    position: relative;
+    transition: 0.5s;
+    margin-left: 270px;
+}
+
+#main-app {
+    background: url(images/background.png) repeat-x;
+    background-attachment: fixed;
+    position: relative;
+    transition: 0.5s;
+    height: 100%;
+}
+
+table {
+    margin: 0 0 2em 0;
+    width: 95%;
+}
+
+table tr {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/*
+tr:nth-child(odd) td:nth-child(even) {
+    background-color: #600000;
+
+}*/
+
+table td {
+    padding: 0.75em 0.75em;
+}
+
+/*
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: #600000;
+}*/
+
+#map {
+    height: 500px;
+    width: 100%;
+    background: ffffff;
+}
+
+#chart-div {
+    height: 500px;
+    width: 100%;
+    background: ffffff;
+}
+
+.article {
+    background: url(images/article.png);
+    overflow: hidden;
+}
+
+.article a {
+    font-size: 25px;
+    color: #ffffff;
+    padding: 5px 5px 5px;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s;
+}
+
+.article a:hover {
+    color: #000000;
+}
+
+.article a:active {
+    color: #ffff00;
+}
+
+.article-intro {
+    background: none;
+    padding: 3em;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1080px) {
+    #main {
+        margin-left: 230px;
+    }
+
+    #header {
+        height: 55px;
+        padding-top: 27px;
+    }
+
+    #header a {
+        font-size: 23px;
+    }
+
+    #view a {
+        font-size: 14px;
+    }
+
+    #sidebar {
+        width: 230px;
+    }
+
+    #sidebar a {
+        font-size: 23px;
+    }
+
+    h1 {
+        font: bold 56px arial, sans-serif;
+    }
+
+    h2 {
+        font: 25px arial, sans-serif;
+    }
+
+    h3 {
+        font: 25px arial, sans-serif;
+    }
+
+    h4 {
+        font: 19px arial, sans-serif;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #main {
+        margin-left: 175px;
+    }
+
+    #header {
+        height: 50px;
+        padding-top: 25px;
+    }
+
+    #header a {
+        font-size: 18px;
+    }
+
+    #view a {
+        font-size: 12px;
+    }
+
+    #sidebar {
+        width: 175px;
+    }
+
+    #sidebar a {
+        font-size: 18px;
+    }
+
+    h1 {
+        font: bold 48px arial, sans-serif;
+    }
+
+    h2 {
+        font: 20px arial, sans-serif;
+    }
+
+    h3 {
+        font: 20px arial, sans-serif;
+    }
+
+    h4 {
+        font: 14px arial, sans-serif;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #main {
+        margin-left: 150px;
+    }
+
+    #header {
+        height: 45px;
+        padding-top: 22px;
+    }
+
+    #header a {
+        font-size: 14px;
+    }
+
+    #view a {
+        font-size: 10px;
+    }
+
+    #sidebar {
+        width: 150px;
+    }
+
+    #sidebar a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font: bold 40px arial, sans-serif;
+    }
+
+    h2 {
+        font: 18px arial, sans-serif;
+    }
+
+    h3 {
+        font: 18px arial, sans-serif;
+    }
+
+    h4 {
+        font: 12px arial, sans-serif;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #main {
+        margin-left: 130px;
+    }
+
+    #header {
+        height: 40px;
+        padding-top: 20px;
+    }
+
+    #header a {
+        font-size: 13px;
+    }
+
+    #view a {
+        font-size: 9px;
+    }
+
+    #sidebar {
+        width: 130px;
+    }
+
+    #sidebar a {
+        font-size: 13px;
+    }
+
+    h1 {
+        font: bold 32px arial, sans-serif;
+    }
+
+    h2 {
+        font: 16px arial, sans-serif;
+    }
+
+    h3 {
+        font: 16px arial, sans-serif;
+    }
+
+    h4 {
+        font: 11px arial, sans-serif;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #main {
+        margin-left: 65px;
+    }
+
+    #header {
+        height: 35px;
+        padding-top: 17px;
+    }
+
+    #header a {
+        font-size: 7px;
+    }
+
+    #view a {
+        font-size: 5px;
+    }
+
+    #sidebar {
+        width: 65px;
+    }
+
+    #sidebar a {
+        font-size: 7px;
+    }
+
+    h1 {
+        font: bold 16px arial, sans-serif;
+    }
+
+    h2 {
+        font: 8px arial, sans-serif;
+    }
+
+    h3 {
+        font: 8px arial, sans-serif;
+    }
+
+    h4 {
+        font: 5px arial, sans-serif;
+    }
+}
+
