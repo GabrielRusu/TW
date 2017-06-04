@@ -10,5 +10,7 @@
     <body>
         <h1>Hello World!</h1>
         <p>This is the homepage!</p>
+
+        <h3><a href="/">New Contact</a></h3>
     </body>
 </html>
