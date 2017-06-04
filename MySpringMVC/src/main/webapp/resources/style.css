@@ -32,6 +32,11 @@ h4 {
     color: #f7f7f7;
 }
 
+h5 {
+    font: 12px arial, sans-serif;
+    color: #f7f7f7;
+}
+
 html, body, div, p, img, table, menu, header {
     margin: 0;
     padding: 0;
