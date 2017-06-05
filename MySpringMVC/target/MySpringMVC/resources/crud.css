@@ -49,6 +49,7 @@ html, body, div, p, img, table, menu, header {
 body {
     font: normal .80em arial, sans-serif;
     color: #1D1D1D;
+    height: 100%;
 }
 
 #header {
@@ -149,6 +150,7 @@ body {
     position: relative;
     transition: 0.5s;
     margin-left: 270px;
+    height: 100%;
 }
 
 #main-app {
@@ -160,28 +162,39 @@ body {
 }
 
 table {
-    margin: 0 0 2em 0;
-    width: 95%;
+    margin: 0 0 5px 0;
+    width: 90%;
 }
 
 table tr {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/*
-tr:nth-child(odd) td:nth-child(even) {
-    background-color: #600000;
-
-}*/
-
 table td {
-    padding: 0.75em 0.75em;
+    padding: 3px 5px 3px 5px;
+    font: 12px arial, sans-serif;
+    align: center;
+    color: #f7f7f7;
 }
 
-/*
-tr:nth-child(even) td:nth-child(odd) {
+table th {
+    padding: 3px 5px 3px 5px;
+    font: 18px arial, sans-serif;
+    color: #f7f7f7;
+}
+
+
+td:nth-child(even) {
     background-color: #600000;
-}*/
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
 
 #map {
     height: 500px;

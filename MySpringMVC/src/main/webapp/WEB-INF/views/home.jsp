@@ -1,5 +1,4 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="MySpringMVC.model.District" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -19,7 +18,6 @@
 
 <div id="sidebar">
     <div class="menu">
-        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
         <a href="#intro">INTRODUCERE</a>
         <a href="#first">DETALII</a>
         <a href="#second">APLICATII</a>
@@ -37,6 +35,7 @@
                 <form action="en-index.html">
                     <input type="submit" value="Change to English"/>
                 </form>
+                <a href="viewDistrict">DISTRICTS</a>
                 <p>
                 <h2>Proiectul NEDa</h2></p>
                 <p>
