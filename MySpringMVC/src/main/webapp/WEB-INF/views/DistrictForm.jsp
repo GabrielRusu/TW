@@ -1,4 +1,3 @@
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="MySpringMVC.model.District" %>
 
 <%@ page contentType="text/html" pageEncoding="UTF-8" %>
@@ -11,7 +10,7 @@
 <html>
 <head>
     <title>INepal</title>
-    <link rel="stylesheet" type="text/css" href="../../resources/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../resources/crud.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="../../resources/js/sidebar.js"></script>
@@ -38,41 +37,32 @@
         <a href="map.html">Harta</a>
     </div>
 
-    <section id="intro">
-        <div class="article-intro">
-
-            <div align="center">
+    <div align="center">
+        <section id="intro">
+            <div class="article-intro">
                 <h1>Edit/Add District</h1>
-
-                <form action="saveDistrict" method="post" modelAttribute="district">
-                    <table>
-                        <hidden path="id"/>
-                        <tr>
-                            <td>Name:</td>
-                            <td><input path="name"/></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="center"><input type="submit" value="Save"></td>
-                        </tr>
-                    </table>
-                </form>
 
                 <% District post = (District) request.getAttribute("district");
                 %>
                 <form action="saveDistrict" method="post" modelAttribute="district">
-                    ID:<br>
-                    <input type="text" name="id" path="id" value="<%=post.getId()%>">
-                    <br>
-                    Name:<br>
-                    <input type="text" name="name" path="name" value="<%=post.getName()%>">
-                    <br><br>
-                    <input type="submit" value="Submit">
+                    <table>
+                        <tr>
+                            <td> ID</td>
+                            <td><input type="text" name="id" path="id" value="<%=post.getId()%>"></td>
+                        </tr>
+                        <tr>
+                            <td> Name</td>
+                            <td><input type="text" name="name" path="name" value="<%=post.getName()%>"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit" style="color: #ffffff;"></td>
+                        </tr>
+                    </table>
                 </form>
-
             </div>
-
-        </div>
-    </section>
+        </section>
+    </div>
 
 </div>
 

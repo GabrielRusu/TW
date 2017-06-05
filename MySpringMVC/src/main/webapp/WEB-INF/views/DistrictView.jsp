@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>INepal</title>
-    <link rel="stylesheet" type="text/css" href="../../resources/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../resources/crud.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="../../resources/js/sidebar.js"></script>
@@ -39,60 +39,35 @@
         <a href="map.html">Harta</a>
     </div>
 
-    <section id="intro">
-        <div class="article-intro">
+    <div align="center">
+        <section id="intro">
+            <div class="article-intro">
 
-            <div align="center">
                 <h1>District List</h1>
                 <a href="newDistrict"><h4>New District</h4></a>
-                <div class="article">
-                    <table>
-                        <th><h4>ID</h4></th>
-                        <th><h4>Name</h4></th>
-                        <th><h4>Edit or Delete</h4></th>
 
-                        </th>
-                        <%
-                            ArrayList<District> posts = (ArrayList<District>) request.getAttribute("listDistrict");
-                            for (District post : posts) {
-                        %>
-                        <tr>
-                            <td><h5><%=post.getId()%>
-                            </h5>
-                            </td>
-                            <td><h5><%=post.getName()%>
-                            </h5>
-                            </td>
-                            <td>
-                                <a href="/editDistrict?id=<%=post.getId()%>"><h5>Edit</h5></a>
-                                <a href="/deleteDistrict?id=<%=post.getId()%>"><h5>Delete</h5></a>
-                            </td>
-                        </tr>
-                        <%}%>
-                    </table>
+                <table>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
 
-                </div>
+                    <% ArrayList<District> posts = (ArrayList<District>) request.getAttribute("listDistrict");
+                        for (District post : posts) { %>
+                    <tr>
+                        <td><%=post.getId()%>
+                        </td>
+                        <td><%=post.getName()%>
+                        </td>
+                        <td><a href="/editDistrict?id=<%=post.getId()%>"><h5>Edit</h5></a></td>
+                        <td><a href="/deleteDistrict?id=<%=post.getId()%>"><h5>Delete</h5></a></td>
+                    </tr>
+                    <%}%>
+                </table>
 
             </div>
-
-            <h3>Table</h3>
-            <p>
-            <h2>Sunteti la modul de vizualizare tabel</h2></p>
-            <p>
-            <h2>Aici puteti alege din ce categorie doriti sa afisati si puteti filtra informatiile sau alege coloanele
-                separat pentru afisare</h2></p>
-            <p>
-            <h2>Puteti exporta chart-ul in format .png, .jpg sau in format .csv</h2></p>
-
-            <div id="view">
-                <a href="">PNG</a>
-                <a href="">JPG</a>
-                <a href="">CSV</a>
-            </div>
-
-        </div>
-    </section>
-
+        </section>
+    </div>
 
 </div>
 
