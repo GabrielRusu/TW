@@ -41,19 +41,19 @@ public class DistrictController {
     @RequestMapping(value = "/saveDistrict", method = RequestMethod.POST)
     public ModelAndView saveDistrict(@ModelAttribute District district) {
         districtDAO.saveOrUpdate(district);
-        return new ModelAndView("redirect:/");
+        return new ModelAndView("redirect:/viewDistrict");
     }
 
-    @RequestMapping(value = "/deleteDistroct", method = RequestMethod.GET)
+    @RequestMapping(value = "/deleteDistrict", method = RequestMethod.GET)
     public ModelAndView deleteDistrict(HttpServletRequest request) {
-        int dis_id = Integer.parseInt(request.getParameter("dis_id"));
+        int dis_id = Integer.parseInt(request.getParameter("id"));
         districtDAO.delete(dis_id);
-        return new ModelAndView("redirect:/");
+        return new ModelAndView("redirect:/viewDistrict");
     }
 
     @RequestMapping(value = "/editDistrict", method = RequestMethod.GET)
     public ModelAndView editDistrict(HttpServletRequest request) {
-        int dis_id = Integer.parseInt(request.getParameter("dis_id"));
+        int dis_id = Integer.parseInt(request.getParameter("id"));
         District district = districtDAO.get(dis_id);
         ModelAndView model = new ModelAndView("DistrictForm");
         model.addObject("district", district);

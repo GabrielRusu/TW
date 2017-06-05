@@ -1,7 +1,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="MySpringMVC.model.District" %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -43,24 +43,8 @@
         <div class="article-intro">
 
             <div align="center">
-                <h1>New/Edit district</h1>
-                <form action="saveDistrict" method="post" modelAttribute="district">
-                    <table>
-                        <hidden path="id"/>
-                        <tr>
-                            <td>Name:</td>
-                            <td><input path="name"/></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="center"><input type="submit" value="Save"></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-
-            <div align="center">
                 <h1>District List</h1>
-                <h4><a href="/newDistrict">New District</a></h4>
+                <a href="newDistrict"><h4>New District</h4></a>
                 <div class="article">
                     <table>
                         <th><h4>ID</h4></th>
@@ -70,8 +54,6 @@
                         </th>
                         <%
                             ArrayList<District> posts = (ArrayList<District>) request.getAttribute("listDistrict");
-                        %>
-                        <%
                             for (District post : posts) {
                         %>
                         <tr>
@@ -82,9 +64,8 @@
                             </h5>
                             </td>
                             <td>
-                                <a href="/editContact?id=<%=post.getId()%>"><h5>Edit</h5></a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="/deleteContact?id=<%=post.getId()%>"><h5>Delete</h5></a>
+                                <a href="/editDistrict?id=<%=post.getId()%>"><h5>Edit</h5></a>
+                                <a href="/deleteDistrict?id=<%=post.getId()%>"><h5>Delete</h5></a>
                             </td>
                         </tr>
                         <%}%>

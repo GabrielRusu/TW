@@ -29,7 +29,7 @@ public class DistrictDAOImpl implements DistrictDAO {
             jdbcTemplate.update(sql, district.getName(), district.getId());
         } else {
             // insert
-            String sql = "INSERT INTO district (dis_id, name) VALUES (?, ?)";
+            String sql = "INSERT INTO districts (dis_id, name) VALUES (?, ?)";
             jdbcTemplate.update(sql, district.getId(), district.getName());
         }
     }
@@ -61,8 +61,8 @@ public class DistrictDAOImpl implements DistrictDAO {
     }
 
     @Override
-    public District get(int dis_id) {
-        String sql = "SELECT * FROM contact WHERE contact_id = dis_id";
+    public District get(int id) {
+        String sql = "SELECT * FROM districts WHERE dis_id = " + id;
         return jdbcTemplate.query(sql, new ResultSetExtractor<District>() {
 
             @Override
