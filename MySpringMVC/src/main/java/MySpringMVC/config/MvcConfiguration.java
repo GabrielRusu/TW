@@ -14,6 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import MySpringMVC.dao.DistrictDAO;
 import MySpringMVC.dao.DistrictDAOImpl;
+import MySpringMVC.dao.TablesDAOImpl;
 
 @Configuration
 @ComponentScan(basePackages = "MySpringMVC")
@@ -47,6 +48,11 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
     @Bean
     public DistrictDAO getDistrictDAO() {
         return new DistrictDAOImpl(getDataSource());
+    }
+
+    @Bean
+    public TablesDAOImpl getTablesDAO() {
+        return new TablesDAOImpl(getDataSource());
     }
 
 }

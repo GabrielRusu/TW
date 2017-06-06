@@ -21,7 +21,6 @@
 
 <div id="header">
     <div class="menu">
-        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
         <a href="/home#intro">INTRODUCERE</a>
         <a href="/home#first">DETALII</a>
         <a href="/home#second">APLICATII</a>

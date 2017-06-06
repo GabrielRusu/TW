@@ -1,5 +1,4 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="MySpringMVC.model.District" %>
+
 
 <%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -41,29 +40,23 @@
     <div align="center">
         <section id="intro">
             <div class="article-intro">
+                <h1>Edit/Add District</h1>
 
-                <h1>District List</h1>
-                <a href="newDistrict"><h4>New District</h4></a>
+                <a href="/viewDistrict">VIEW DISTRICT</a>
 
-                <table>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                <form>
+                    <table>
+                        <tr>
+                            <td> ID</td>
+                            <td> <a href="/updateTables"><h5>UPDATE</h5></a></td>
+                        </tr>
+                        <tr>
+                            <td> Name</td>
+                            <td></td>
+                        </tr>
 
-                    <% ArrayList<District> posts = (ArrayList<District>) request.getAttribute("listDistrict");
-                        for (District post : posts) { %>
-                    <tr>
-                        <td><%=post.getId()%>
-                        </td>
-                        <td><%=post.getName()%>
-                        </td>
-                        <td><a href="/editDistrict?id=<%=post.getId()%>"><h5>Edit</h5></a></td>
-                        <td><a href="/deleteDistrict?id=<%=post.getId()%>"><h5>Delete</h5></a></td>
-                    </tr>
-                    <%}%>
-                </table>
-
+                    </table>
+                </form>
             </div>
         </section>
     </div>
