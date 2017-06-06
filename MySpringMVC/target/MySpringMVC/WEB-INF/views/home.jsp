@@ -35,7 +35,7 @@
                 <form action="en-index.html">
                     <input type="submit" value="Change to English"/>
                 </form>
-                <a href="viewDistrict">DISTRICTS</a>
+                <a href="/viewTables">VIEW TABLES</a>
                 <p>
                 <h2>Proiectul NEDa</h2></p>
                 <p>
