@@ -2,6 +2,9 @@ package MySpringMVC.config;
 
 import javax.sql.DataSource;
 
+import MySpringMVC.dao.*;
+import MySpringMVC.model.Municipality;
+import MySpringMVC.model.Village;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,10 +14,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-
-import MySpringMVC.dao.DistrictDAO;
-import MySpringMVC.dao.DistrictDAOImpl;
-import MySpringMVC.dao.TablesDAOImpl;
 
 @Configuration
 @ComponentScan(basePackages = "MySpringMVC")
@@ -49,6 +48,17 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
     public DistrictDAO getDistrictDAO() {
         return new DistrictDAOImpl(getDataSource());
     }
+
+    @Bean
+    public MunicipalityDAO getMunicipalityDAO() {
+        return new MunicipalityDAOImpl(getDataSource());
+    }
+
+    @Bean
+    public VillageDAO getVillageDAO() {
+        return new VillageDAOImpl(getDataSource());
+    }
+
 
     @Bean
     public TablesDAOImpl getTablesDAO() {

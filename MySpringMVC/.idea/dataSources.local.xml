@@ -9,7 +9,9 @@
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>ION</user-name>
+      <introspection-schemas>*:ION</introspection-schemas>
       <resolve-scope>*:ION,PUBLIC</resolve-scope>
+      <unqualified-resolve-schemas>*:ION,PUBLIC</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>
