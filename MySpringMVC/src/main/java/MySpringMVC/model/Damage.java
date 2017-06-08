@@ -12,11 +12,10 @@ public class Damage {
     private int femInjured;
     private int publicDamages;
 
-    public Damage(){
+    public Damage() {
 
     }
-
-
+    
     public Damage(int disId, int maleDeath, int femDeath, int maleInjured, int femInjured, int publicDamages) {
         this.disId = disId;
         this.maleDeath = maleDeath;

@@ -8,7 +8,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font: bold 64px arial, sans-serif;
+    font: bold 50px arial, sans-serif;
     padding: 0 0 5px 0;
     color: #ffffff;
     font-weight: bold;
@@ -168,34 +168,26 @@ table tr {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/*
-tr:nth-child(odd) td:nth-child(even) {
-    background-color: #600000;
-
-}*/
-
 table td {
     padding: 0.75em 0.75em;
 }
 
-/*
-tr:nth-child(even) td:nth-child(odd) {
-    background-color: #600000;
-}*/
-
-#map {
+div#map {
+    margin: 0 auto;
     height: 500px;
-    width: 100%;
+    width: 75%;
     background: ffffff;
 }
 
-#chart-div {
+div#chart-div {
+    margin: 0 auto;
     height: 500px;
-    width: 100%;
+    width: 75%;
     background: ffffff;
 }
 
 .article {
+    height: 700px;
     background: url(images/article.png);
     overflow: hidden;
 }
@@ -218,6 +210,7 @@ tr:nth-child(even) td:nth-child(odd) {
 }
 
 .article-intro {
+    height: 700px;
     background: none;
     padding: 3em;
     overflow: hidden;
@@ -226,6 +219,10 @@ tr:nth-child(even) td:nth-child(odd) {
 @media screen and (max-width: 1080px) {
     #main {
         margin-left: 230px;
+    }
+
+    .article .article-intro{
+        height: 600px;
     }
 
     #header {
@@ -271,6 +268,10 @@ tr:nth-child(even) td:nth-child(odd) {
         margin-left: 175px;
     }
 
+    .article .article-intro{
+        height: 500px;
+    }
+
     #header {
         height: 50px;
         padding-top: 25px;
@@ -312,6 +313,10 @@ tr:nth-child(even) td:nth-child(odd) {
 @media screen and (max-width: 720px) {
     #main {
         margin-left: 150px;
+    }
+
+    .article .article-intro{
+        height: 450px;
     }
 
     #header {
@@ -357,6 +362,10 @@ tr:nth-child(even) td:nth-child(odd) {
         margin-left: 130px;
     }
 
+    .article .article-intro{
+        height: 350px;
+    }
+
     #header {
         height: 40px;
         padding-top: 20px;
@@ -398,6 +407,10 @@ tr:nth-child(even) td:nth-child(odd) {
 @media screen and (max-width: 320px) {
     #main {
         margin-left: 65px;
+    }
+
+    .article .article-intro{
+        height: 170px;
     }
 
     #header {

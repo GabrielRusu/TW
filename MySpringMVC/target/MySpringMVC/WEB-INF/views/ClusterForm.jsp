@@ -20,38 +20,43 @@
 
 <div id="header">
     <div class="menu">
-        <a href="/home#intro">INTRODUCERE</a>
-        <a href="/home#first">DETALII</a>
-        <a href="/home#second">APLICATII</a>
-        <a href="/home#voluntar">FII VOLUNTAR!</a>
-        <a href="/home#third">FINAL</a>
+        <a href="/#intro">INTRODUCERE</a>
+        <a href="/#first">DETALII</a>
+        <a href="/#second">APLICATII</a>
+        <a href="/#voluntar">FII VOLUNTAR!</a>
+        <a href="/#third">FINAL</a>
     </div>
 </div>
 
 <div id="main-app">
 
     <div id="view">
-        <a href="table.html">Tabel</a>
-        <a href="graphic.html">Grafic</a>
-        <a href="chart.html">Chart</a>
-        <a href="map.html">Harta</a>
+        <a href="/viewCluster">Clusters</a>
+        <a href="/viewDamage">Damages</a>
+        <a href="/viewDistrict">Districts</a>
+        <a href="/viewEarthquake">Earthquakes</a>
+        <a href="/viewMunicipality">Municipalities</a>
+        <a href="/viewVillage">Villages</a>
     </div>
 
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Edit/Add Cluster</h1>
+                <h2>Modifica/Adauga un Cluster</h2>
+
+                <h3>Pentru a introduce un nou Cluster, adaugati un ID inexistent</h3>
+                <h3>Pentru a modifica un Cluster existent, modificati doar numele</h3>
 
                 <% Cluster post = (Cluster) request.getAttribute("Cluster");
                 %>
                 <form action="saveCluster" method="post" modelAttribute="Cluster">
                     <table>
                         <tr>
-                            <td> ID</td>
+                            <td>ID</td>
                             <td><input type="text" name="id" path="id" value="<%=post.getId()%>"></td>
                         </tr>
                         <tr>
-                            <td> Name</td>
+                            <td>Nume</td>
                             <td><input type="text" name="name" path="name" value="<%=post.getName()%>"></td>
                         </tr>
                         <tr>
