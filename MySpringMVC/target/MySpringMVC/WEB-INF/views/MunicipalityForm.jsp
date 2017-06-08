@@ -20,21 +20,23 @@
 
 <div id="header">
     <div class="menu">
-        <a href="/home#intro">INTRODUCERE</a>
-        <a href="/home#first">DETALII</a>
-        <a href="/home#second">APLICATII</a>
-        <a href="/home#voluntar">FII VOLUNTAR!</a>
-        <a href="/home#third">FINAL</a>
+        <a href="/#intro">INTRODUCERE</a>
+        <a href="/#first">DETALII</a>
+        <a href="/#second">APLICATII</a>
+        <a href="/#voluntar">FII VOLUNTAR!</a>
+        <a href="/#third">FINAL</a>
     </div>
 </div>
 
 <div id="main-app">
 
     <div id="view">
-        <a href="table.html">Tabel</a>
-        <a href="graphic.html">Grafic</a>
-        <a href="chart.html">Chart</a>
-        <a href="map.html">Harta</a>
+        <a href="/viewCluster">Clusters</a>
+        <a href="/viewDamage">Damages</a>
+        <a href="/viewDistrict">Districts</a>
+        <a href="/viewEarthquake">Earthquakes</a>
+        <a href="/viewMunicipality">Municipalities</a>
+        <a href="/viewVillage">Villages</a>
     </div>
 
     <div align="center">

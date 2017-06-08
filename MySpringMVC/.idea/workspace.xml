@@ -35,91 +35,82 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClusterView.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ClusterView.jsp">
+      <file leaf-file-name="ClusterDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+            <state relative-caret-position="578">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1392#1743#0" expanded="true" />
+                <element signature="e#1742#1743#0" expanded="true" />
+                <marker date="1496921240144" expanded="true" signature="739:781" ph="UPDATE Clust... " />
+                <marker date="1496921240144" expanded="true" signature="923:973" ph="INSERT INTO Clusters... " />
+                <marker date="1496921240144" expanded="true" signature="1136:1172" ph="DELETE FROM " />
+                <marker date="1496921240144" expanded="true" signature="1290:1329" ph="SELECT * FRO... Clusters" />
+                <marker date="1496921240144" expanded="true" signature="1851:1890" ph="SELECT * FRO... Clusters" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="193" column="0" lean-forward="true" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClusterForm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ClusterForm.jsp">
+      <file leaf-file-name="crud.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/crud.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            <state relative-caret-position="-561">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChartView.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ChartView.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EarthquakeView.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/EarthquakeView.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EarthquakeForm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/EarthquakeForm.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DistrictView.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DistrictView.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DistrictForm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DistrictForm.jsp">
+      <file leaf-file-name="MapView.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MapView.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DamageView.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DamageView.jsp">
+      <file leaf-file-name="ChartView.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ChartView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+            <state relative-caret-position="119">
+              <caret line="37" column="35" lean-forward="false" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DamageForm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DamageForm.jsp">
+      <file leaf-file-name="SimpleTableView.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/SimpleTableView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+            <state relative-caret-position="119">
+              <caret line="7" column="70" lean-forward="false" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -128,8 +119,8 @@
       <file leaf-file-name="GraphView.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/GraphView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="801">
-              <caret line="63" column="7" lean-forward="false" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
+            <state relative-caret-position="104">
+              <caret line="7" column="70" lean-forward="false" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -173,8 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MunicipalityDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MunicipalitiesDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MunicipalityDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/model/Municipality.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/VillageDAO.java" />
@@ -189,12 +178,9 @@
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/model/Cluster.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/ClusterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/model/MapInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MapViewDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/MapViewController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/SimpleTableView.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/GraphView.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/ChartViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ChartViewDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/GraphViewDAOImpl.java" />
@@ -209,8 +195,6 @@
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/MunicipalityController.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/VillageController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ChartView.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MapView.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DamageForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DamageView.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DistrictForm.jsp" />
@@ -224,6 +208,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/EarthquakeView.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ClusterView.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ClusterForm.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MapView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/SimpleTableView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/GraphView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ChartView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/style.css" />
       </list>
     </option>
   </component>
@@ -1099,12 +1090,12 @@
       <workItem from="1496829144340" duration="8424000" />
       <workItem from="1496839572498" duration="25229000" />
       <workItem from="1496915376309" duration="213000" />
-      <workItem from="1496915726263" duration="3815000" />
+      <workItem from="1496915726263" duration="6682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107977000" />
+    <option name="totallyTimeSpent" value="110844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1169,10 +1160,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/EarthquakeDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/model/Municipality.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MunicipalityDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MunicipalityDAOImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/EarthquakeDAOImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/model/District.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1196,21 +1183,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1496915149980" expanded="true" signature="737:779" ph="UPDATE Clust... " />
-            <marker date="1496915149980" expanded="true" signature="921:971" ph="INSERT INTO Clusters... " />
-            <marker date="1496915149980" expanded="true" signature="1134:1170" ph="DELETE FROM " />
-            <marker date="1496915149980" expanded="true" signature="1288:1327" ph="SELECT * FRO... Clusters" />
-            <marker date="1496915149980" expanded="true" signature="1849:1888" ph="SELECT * FRO... Clusters" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/model/MapInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -1337,14 +1309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/ClusterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/DistrictController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1417,18 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ChartViewDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1496917373515" expanded="true" signature="625:662" ph="SELECT * FRO... districts" />
-            <marker date="1496917373515" expanded="true" signature="1181:1220" ph="SELECT * FRO... districts" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/VillageView.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1453,14 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/SimpleTableView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="65" column="7" lean-forward="false" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MunicipalityView.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1473,30 +1417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MapView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/GraphView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="63" column="7" lean-forward="false" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1565,10 +1485,113 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/ClusterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ChartViewDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1496917373515" expanded="true" signature="625:662" ph="SELECT * FRO... districts" />
+            <marker date="1496917373515" expanded="true" signature="1181:1220" ph="SELECT * FRO... districts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1392#1743#0" expanded="true" />
+            <element signature="e#1742#1743#0" expanded="true" />
+            <marker date="1496921240144" expanded="true" signature="739:781" ph="UPDATE Clust... " />
+            <marker date="1496921240144" expanded="true" signature="923:973" ph="INSERT INTO Clusters... " />
+            <marker date="1496921240144" expanded="true" signature="1136:1172" ph="DELETE FROM " />
+            <marker date="1496921240144" expanded="true" signature="1290:1329" ph="SELECT * FRO... Clusters" />
+            <marker date="1496921240144" expanded="true" signature="1851:1890" ph="SELECT * FRO... Clusters" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/crud.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MapView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/SimpleTableView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="70" lean-forward="false" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/GraphView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="7" column="70" lean-forward="false" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/charts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ChartView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="119">
+          <caret line="37" column="35" lean-forward="false" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="193" column="0" lean-forward="true" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
           <folding />
         </state>
       </provider>
