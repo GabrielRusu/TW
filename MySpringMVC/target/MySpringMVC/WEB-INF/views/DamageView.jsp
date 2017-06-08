@@ -21,21 +21,23 @@
 
 <div id="header">
     <div class="menu">
-        <a href="/home#intro">INTRODUCERE</a>
-        <a href="/home#first">DETALII</a>
-        <a href="/home#second">APLICATII</a>
-        <a href="/home#voluntar">FII VOLUNTAR!</a>
-        <a href="/home#third">FINAL</a>
+        <a href="/#intro">INTRODUCERE</a>
+        <a href="/#first">DETALII</a>
+        <a href="/#second">APLICATII</a>
+        <a href="/#voluntar">FII VOLUNTAR!</a>
+        <a href="/#third">FINAL</a>
     </div>
 </div>
 
 <div id="main-app">
 
     <div id="view">
-        <a href="table.html">Tabel</a>
-        <a href="graphic.html">Grafic</a>
-        <a href="chart.html">Chart</a>
-        <a href="map.html">Harta</a>
+        <a href="/viewCluster">Clusters</a>
+        <a href="/viewDamage">Damages</a>
+        <a href="/viewDistrict">Districts</a>
+        <a href="/viewEarthquake">Earthquakes</a>
+        <a href="/viewMunicipality">Municipalities</a>
+        <a href="/viewVillage">Villages</a>
     </div>
 
     <div align="center">
@@ -43,17 +45,17 @@
             <div class="article-intro">
 
                 <h1>Damage List</h1>
-                <a href="newDamage"><h4>New Damage</h4></a>
+                <a href="newDamage"><h5>Adauga un nou Damage</h5></a>
 
                 <table>
-                    <th>disId</th>
-                    <th>maleDeath</th>
-                    <th>femaleDeath</th>
-                    <th>maleInjured</th>
-                    <th>femaleInjured</th>
-                    <th>publicDamages</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>District ID</th>
+                    <th>Victime - barbati</th>
+                    <th>Victime - femei</th>
+                    <th>Raniti - barbati</th>
+                    <th>Raniti - femei</th>
+                    <th>Cladiri daunate</th>
+                    <th>Modifica</th>
+                    <th>Sterge</th>
 
                     <% ArrayList<Damage> posts = (ArrayList<Damage>) request.getAttribute("listDamage");
                         for (Damage post : posts) { %>
@@ -70,8 +72,8 @@
                         </td>
                         <td><%=post.getPublicDamages()%>
                         </td>
-                        <td><a href="/editDamage?dis_id=<%=post.getDisId()%>"><h5>Edit</h5></a></td>
-                        <td><a href="/deleteDamage?dis_id=<%=post.getDisId()%>"><h5>Delete</h5></a></td>
+                        <td><a href="/editDamage?dis_id=<%=post.getDisId()%>"><h5>Modifica</h5></a></td>
+                        <td><a href="/deleteDamage?dis_id=<%=post.getDisId()%>"><h5>Sterge</h5></a></td>
                     </tr>
                     <%}%>
                 </table>

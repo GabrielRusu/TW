@@ -2,17 +2,19 @@ package MySpringMVC.dao;
 
 
 import MySpringMVC.model.Cluster;
+
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
 import javax.sql.DataSource;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ClusterDAOImpl implements  ClusterDAO{
+public class ClusterDAOImpl implements ClusterDAO {
     private JdbcTemplate jdbcTemplate;
 
     public ClusterDAOImpl(DataSource dataSource) {
@@ -40,7 +42,7 @@ public class ClusterDAOImpl implements  ClusterDAO{
 
     @Override
     public List<Cluster> list() {
-        String sql = "SELECT * FROM Clusters order by CLUS_ID";
+        String sql = "SELECT * FROM Clusters ORDER BY CLUS_ID";
         List<Cluster> listCluster = jdbcTemplate.query(sql, new RowMapper<Cluster>() {
 
             @Override

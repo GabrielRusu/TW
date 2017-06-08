@@ -2,6 +2,7 @@ package MySpringMVC.controller;
 
 import MySpringMVC.dao.DamageDAO;
 import MySpringMVC.model.Damage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,11 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+
 import java.io.IOException;
 import java.util.List;
 
 @Controller
 public class DamageController {
+
     @Autowired
     private DamageDAO DamageDAO;
 
@@ -36,8 +39,8 @@ public class DamageController {
     }
 
     @RequestMapping(value = "/saveDamage", method = RequestMethod.POST)
-    public ModelAndView saveDamage(@ModelAttribute Damage Damage) {
-        DamageDAO.saveOrUpdate(Damage);
+    public ModelAndView saveDamage(@ModelAttribute Damage damage) {
+        DamageDAO.saveOrUpdate(damage);
         return new ModelAndView("redirect:/viewDamage");
     }
 
@@ -51,9 +54,9 @@ public class DamageController {
     @RequestMapping(value = "/editDamage", method = RequestMethod.GET)
     public ModelAndView editDamage(HttpServletRequest request) {
         int dis_id = Integer.parseInt(request.getParameter("dis_id"));
-        Damage Damage = DamageDAO.get(dis_id);
+        Damage damage = DamageDAO.get(dis_id);
         ModelAndView model = new ModelAndView("DamageForm");
-        model.addObject("Damage", Damage);
+        model.addObject("Damage", damage);
 
         return model;
     }
