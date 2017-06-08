@@ -28,7 +28,7 @@ public class TablesController {
 
     @RequestMapping(value = "/updateTables", method = RequestMethod.GET)
     public ModelAndView updateTables() {
-        tablesDAO.update();
+        tablesDAO.updatePopulation();
         return new ModelAndView("redirect:/viewTables");
     }
 }

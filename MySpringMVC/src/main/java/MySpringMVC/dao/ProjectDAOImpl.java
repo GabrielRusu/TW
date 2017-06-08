@@ -2,33 +2,36 @@ package MySpringMVC.dao;
 
 
 import MySpringMVC.model.Project;
+
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
 import javax.sql.DataSource;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ProjectDAOImpl implements  ProjectDAO{
+public class ProjectDAOImpl implements ProjectDAO {
 
     private JdbcTemplate jdbcTemplate;
 
     public ProjectDAOImpl(DataSource dataSource) {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
+
     @Override
     public void saveOrUpdate(Project Project) {
         if (get(Project.getMunId()) != null) {
             // update
-            String sql = "UPDATE PROJECTS SET item = ? , total = ? , unit = ? WHERE CLUS_ID = ? and DIS_ID = ? and mun_id=? ";
-            jdbcTemplate.update(sql, Project.getItem(), Project.getTotal(), Project.getUnit(),Project.getClusId(),Project.getDisId(),Project.getMunId());
+            String sql = "UPDATE PROJECTS SET item = ? , total = ? , unit = ? WHERE CLUS_ID = ? AND DIS_ID = ? AND mun_id=? ";
+            jdbcTemplate.update(sql, Project.getItem(), Project.getTotal(), Project.getUnit(), Project.getClusId(), Project.getDisId(), Project.getMunId());
         } else {
             // insert
             String sql = "INSERT INTO Projects (CLUS_ID,dis_id,mun_id, ACTIVITY_TYPE,item,total,unit) VALUES (?, ?, ?,?, ?, ?, ?)";
-            jdbcTemplate.update(sql, Project.getClusId(),Project.getDisId(),Project.getMunId(),Project.getActivityType(),Project.getItem(),Project.getTotal(),Project.getUnit());
+            jdbcTemplate.update(sql, Project.getClusId(), Project.getDisId(), Project.getMunId(), Project.getActivityType(), Project.getItem(), Project.getTotal(), Project.getUnit());
         }
     }
 

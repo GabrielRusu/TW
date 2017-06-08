@@ -18,21 +18,21 @@ public class OrganisationDAOImpl implements OrganisationDAO{
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
     @Override
-    public void saveOrUpdate(Organisation Organisation) {
-        if (get(Organisation.getId()) != null) {
+    public void saveOrUpdate(Organisation organisation) {
+        if (get(organisation.getId()) != null) {
             // update
-            String sql = "UPDATE ORGANISATIONS SET org_name = ?, ACRONYM = ? WHERE org_id=? and CLUS_ID = ?";
-            jdbcTemplate.update(sql, Organisation.getName(),Organisation.getAcronym() ,Organisation.getId(), Organisation.getClusId());
+            String sql = "UPDATE ORGANISATIONS SET ORG_NAME = ?, ACRONYM = ?, CLUS_ID = ? WHERE ORG_ID = ?";
+            jdbcTemplate.update(sql, organisation.getName(), organisation.getAcronym(), organisation.getClusId(), organisation.getId());
         } else {
             // insert
-            String sql = "INSERT INTO ORGANISATIONS (ORG_ID,CLUS_ID, ORG_name,ACRONYM) VALUES (?, ?, ?,?)";
-            jdbcTemplate.update(sql, Organisation.getId(),Organisation.getClusId(),Organisation.getName(),Organisation.getAcronym());
+            String sql = "INSERT INTO ORGANISATIONS (ORG_ID, CLUS_ID, ORG_NAME, ACRONYM) VALUES (?, ?, ?, ?)";
+            jdbcTemplate.update(sql, organisation.getId(), organisation.getClusId(), organisation.getName(), organisation.getAcronym());
         }
     }
 
     @Override
     public void delete(int id) {
-        String sql = "DELETE FROM ORGANISATIONS WHERE ORG_ID=?";
+        String sql = "DELETE FROM ORGANISATIONS WHERE ORG_ID = ?";
         jdbcTemplate.update(sql, id);
     }
 
