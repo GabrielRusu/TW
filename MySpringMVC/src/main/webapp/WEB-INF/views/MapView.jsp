@@ -40,7 +40,6 @@
 
                     function initMap() {
 
-
                         var pozInit = {lat: 27.700769, lng: 85.300140};
                         var map = new google.maps.Map(document.getElementById('map'), {
                             zoom: 9,
