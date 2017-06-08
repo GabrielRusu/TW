@@ -153,6 +153,46 @@
         <url-pattern>/viewCluster</url-pattern>
     </servlet-mapping>
 
+	<servlet>
+		<servlet-name>OrganisationView</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextClass</param-name>
+			<param-value>
+				org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>MySpringMVC</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrganisationView</servlet-name>
+		<url-pattern>/viewOrganisation</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProjectView</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextClass</param-name>
+			<param-value>
+				org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>MySpringMVC</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProjectView</servlet-name>
+		<url-pattern>/viewProject</url-pattern>
+	</servlet-mapping>
+
 
 	<servlet>
 		<servlet-name>TablesView</servlet-name>

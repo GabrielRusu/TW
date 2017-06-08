@@ -35,50 +35,30 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClusterView.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ClusterView.jsp">
+      <file leaf-file-name="ProjectView.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ProjectView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="58" column="47" lean-forward="true" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+            <state relative-caret-position="282">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="ProjectDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ProjectDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="150" column="21" lean-forward="true" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClusterDAOImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="1054">
+              <caret line="86" column="10" lean-forward="false" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1496883870907" expanded="true" signature="737:779" ph="UPDATE Clust... " />
-                <marker date="1496883870907" expanded="true" signature="921:971" ph="INSERT INTO Clusters... " />
-                <marker date="1496883870907" expanded="true" signature="1134:1170" ph="DELETE FROM " />
-                <marker date="1496883870907" expanded="true" signature="1288:1320" ph="SELECT * FRO... Clusters" />
-                <marker date="1496883870907" expanded="true" signature="1288:1327" ph="SELECT * FRO... Clusters" />
-                <marker date="1496883870907" expanded="true" signature="1849:1888" ph="SELECT * FRO... Clusters" />
+                <marker date="1496926081067" expanded="true" signature="740:837" ph="UPDATE PROJE... " />
+                <marker date="1496926081067" expanded="true" signature="1060:1163" ph="INSERT INTO municipalities... " />
+                <marker date="1496926081067" expanded="true" signature="1430:1465" ph="DELETE FROM " />
+                <marker date="1496926081067" expanded="true" signature="1582:1620" ph="SELECT * FRO... MUNICIPALITIES" />
+                <marker date="1496926081067" expanded="true" signature="2547:2570" ph="SELECT * FRO... Municipalities" />
+                <marker date="1496926081067" expanded="true" signature="2547:2577" ph="SELECT * FRO... PROJECTS" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DistrictView.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DistrictView.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="58" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -100,9 +80,9 @@
       <find>contact</find>
       <find>DistrictView</find>
       <find>integer</find>
-      <find>Municipality</find>
       <find>Damage</find>
       <find>District</find>
+      <find>Municipality</find>
     </findStrings>
     <replaceStrings>
       <replace>int</replace>
@@ -111,6 +91,8 @@
       <replace>Earthquake</replace>
       <replace>Damage</replace>
       <replace>Cluster</replace>
+      <replace>Organisation</replace>
+      <replace>Project</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -121,18 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/java.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/style.css" />
-        <option value="$PROJECT_DIR$/.project" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/DistrictController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/crud.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DistrictForm.jsp" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f61bc90e-ae79-43f8-9d52-db3e12841f29/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/DistrictDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/TablesDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DistrictView.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/TablesView.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/TablesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/TablesDAOImpl.java" />
@@ -165,13 +135,25 @@
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/DamageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/DamageDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/model/Cluster.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/config/MvcConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/ClusterController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ClusterForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ClusterView.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/model/Organisation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/OrganisationDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/OrganisationController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/OrganisationForm.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/OrganisationView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/OrganisationDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/model/Project.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ProjectDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/config/MvcConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ProjectForm.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ProjectView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ProjectDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -238,7 +220,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -376,7 +358,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -967,12 +949,13 @@
       <workItem from="1496653442993" duration="11575000" />
       <workItem from="1496762434179" duration="12424000" />
       <workItem from="1496829144340" duration="8424000" />
-      <workItem from="1496839572498" duration="25229000" />
+      <workItem from="1496839572498" duration="25577000" />
+      <workItem from="1496914263711" duration="8993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103949000" />
+    <option name="totallyTimeSpent" value="113290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -1037,98 +1020,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MySpringMVC.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f61bc90e-ae79-43f8-9d52-db3e12841f29/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="37" lean-forward="false" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/TablesView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/TablesDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/DistrictDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/TablesController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1145,7 +1040,7 @@
         <state relative-caret-position="255">
           <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1155,9 +1050,9 @@
         <state relative-caret-position="272">
           <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2316#2777#0" expanded="true" />
-            <element signature="e#2776#2777#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2316#2777#0" expanded="false" />
+            <element signature="e#2776#2777#0" expanded="false" />
             <marker date="1496867080816" expanded="true" signature="778:849" ph="UPDATE munic... " />
             <marker date="1496867080816" expanded="true" signature="1030:1098" ph="INSERT INTO VILLAGES... " />
             <marker date="1496867080816" expanded="true" signature="1298:1333" ph="DELETE FROM " />
@@ -1167,21 +1062,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/VillageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1198,8 +1082,8 @@
         <state relative-caret-position="340">
           <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1077#1078#0" expanded="false" />
+            <element signature="e#1113#1114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1227,7 +1111,7 @@
         <state relative-caret-position="255">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1258,56 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MunicipalityDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="14" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MunicipalityDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1496866969440" expanded="true" signature="771:833" ph="UPDATE munic... " />
-            <marker date="1496866969440" expanded="true" signature="1010:1075" ph="INSERT INTO municipalities... " />
-            <marker date="1496866969440" expanded="true" signature="1271:1312" ph="DELETE FROM " />
-            <marker date="1496866969440" expanded="true" signature="1434:1478" ph="SELECT * FRO... MUNICIPALITIES" />
-            <marker date="1496866969440" expanded="true" signature="2173:2187" ph="SELECT * FRO... districts" />
-            <marker date="1496866969440" expanded="true" signature="2173:2215" ph="SELECT * FRO... Municipalities" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/MunicipalityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="18" column="2" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MunicipalityForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MunicipalityView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DamageForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -1329,8 +1163,8 @@
         <state relative-caret-position="967">
           <caret line="82" column="13" lean-forward="true" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2537#3099#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2537#3099#0" expanded="false" />
             <marker date="1496873556816" expanded="true" signature="808:886" ph="UPDATE Earth... " />
             <marker date="1496873556816" expanded="true" signature="1081:1168" ph="INSERT INTO EARTHQUAKES... " />
             <marker date="1496873556816" expanded="true" signature="1403:1443" ph="DELETE FROM " />
@@ -1346,9 +1180,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1356,7 +1187,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1365,7 +1195,7 @@
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1378,23 +1208,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/model/Cluster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="method#Cluster#1;class#Cluster#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/DistrictDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="65" column="39" lean-forward="true" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
           <folding>
-            <element signature="e#1958#2446#0" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#1958#2446#0" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="false" />
             <marker date="1496828864163" expanded="true" signature="746:788" ph="UPDATE distr... " />
             <marker date="1496828864163" expanded="true" signature="932:982" ph="INSERT INTO districts... " />
             <marker date="1496828864163" expanded="true" signature="1147:1183" ph="DELETE FROM " />
@@ -1409,7 +1229,7 @@
         <state relative-caret-position="393">
           <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1496881536988" expanded="true" signature="732:852" ph="UPDATE DAMAG... " />
             <marker date="1496881536988" expanded="true" signature="1094:1204" ph="INSERT INTO DAMAGES... " />
             <marker date="1496881536988" expanded="true" signature="1465:1499" ph="DELETE FROM " />
@@ -1423,7 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="22" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,16 +1251,8 @@
         <state relative-caret-position="68">
           <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/config/MvcConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1449,7 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="56" column="50" lean-forward="true" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,34 +1283,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DistrictView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="58" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="986">
+          <caret line="58" column="40" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ClusterView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="58" column="47" lean-forward="true" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+        <state relative-caret-position="986">
+          <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/model/Cluster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="150" column="21" lean-forward="true" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="method#Cluster#1;class#Cluster#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ClusterDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="49" column="53" lean-forward="true" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1390#1741#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#1935#2420#0" expanded="true" />
+            <element signature="e#2419#2420#0" expanded="true" />
             <marker date="1496883870907" expanded="true" signature="737:779" ph="UPDATE Clust... " />
             <marker date="1496883870907" expanded="true" signature="921:971" ph="INSERT INTO Clusters... " />
             <marker date="1496883870907" expanded="true" signature="1134:1170" ph="DELETE FROM " />
@@ -1508,6 +1324,198 @@
             <marker date="1496883870907" expanded="true" signature="1288:1327" ph="SELECT * FRO... Clusters" />
             <marker date="1496883870907" expanded="true" signature="1849:1888" ph="SELECT * FRO... Clusters" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/model/Organisation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/OrganisationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/OrganisationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/OrganisationForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="62" column="44" lean-forward="false" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/OrganisationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1496918429553" expanded="true" signature="769:850" ph="UPDATE munic... " />
+            <marker date="1496918429553" expanded="true" signature="1054:1133" ph="INSERT INTO municipalities... " />
+            <marker date="1496918429553" expanded="true" signature="1356:1396" ph="DELETE FROM " />
+            <marker date="1496918429553" expanded="true" signature="1518:1561" ph="SELECT * FRO... MUNICIPALITIES" />
+            <marker date="1496918429553" expanded="true" signature="2327:2354" ph="SELECT * FRO... ORGANISATIONS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/OrganisationView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="64" column="50" lean-forward="true" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MunicipalityDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/MunicipalityDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="80" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
+          <folding>
+            <marker date="1496866969440" expanded="true" signature="771:833" ph="UPDATE munic... " />
+            <marker date="1496866969440" expanded="true" signature="1010:1075" ph="INSERT INTO municipalities... " />
+            <marker date="1496866969440" expanded="true" signature="1271:1312" ph="DELETE FROM " />
+            <marker date="1496866969440" expanded="true" signature="1434:1478" ph="SELECT * FRO... MUNICIPALITIES" />
+            <marker date="1496866969440" expanded="true" signature="2173:2187" ph="SELECT * FRO... districts" />
+            <marker date="1496866969440" expanded="true" signature="2173:2215" ph="SELECT * FRO... Municipalities" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ProjectDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/MunicipalityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="18" column="2" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/config/MvcConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MunicipalityForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ProjectForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+          <folding>
+            <marker date="1496925527964" expanded="false" signature="3057:3072" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="192" column="47" lean-forward="true" selection-start-line="192" selection-start-column="47" selection-end-line="192" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MunicipalityView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="24" column="41" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySpringMVC/dao/ProjectDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="86" column="10" lean-forward="false" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1496926081067" expanded="true" signature="740:837" ph="UPDATE PROJE... " />
+            <marker date="1496926081067" expanded="true" signature="1060:1163" ph="INSERT INTO municipalities... " />
+            <marker date="1496926081067" expanded="true" signature="1430:1465" ph="DELETE FROM " />
+            <marker date="1496926081067" expanded="true" signature="1582:1620" ph="SELECT * FRO... MUNICIPALITIES" />
+            <marker date="1496926081067" expanded="true" signature="2547:2570" ph="SELECT * FRO... Municipalities" />
+            <marker date="1496926081067" expanded="true" signature="2547:2577" ph="SELECT * FRO... PROJECTS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ProjectView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
