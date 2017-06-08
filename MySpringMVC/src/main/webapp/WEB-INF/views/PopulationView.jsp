@@ -1,5 +1,5 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="MySpringMVC.model.Village" %>
+<%@ page import="MySpringMVC.model.Population" %>
 
 <%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -12,10 +12,7 @@
 <head>
     <title>INepal</title>
     <link rel="stylesheet" type="text/css" href="../../resources/crud.css"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="../../resources/js/sidebar.js"></script>
-    <script src="../../resources/js/charts.js"></script>
 </head>
 <body>
 
@@ -45,29 +42,33 @@
             <div class="article-intro">
 
                 <h1>Village List</h1>
-                <a href="newVillage"><h5>Adauga un nou Village</h5></a>
+                <a href="/newPopulation"><h5>Adauga o noua Populatie</h5></a>
 
                 <table>
-                    <th>ID</th>
                     <th>Municipiu ID</th>
                     <th>District ID</th>
-                    <th>Nume</th>
-                    <th>Modifica</th>
-                    <th>Sterge</th>
+                    <th>Locuinte</th>
+                    <th>Barbati</th>
+                    <th>Femei</th>
+                    <th>Densitate</th>
 
-                    <% ArrayList<Village> posts = (ArrayList<Village>) request.getAttribute("listVillage");
-                        for (Village post : posts) { %>
+                    <% ArrayList<Population> posts = (ArrayList<Population>) request.getAttribute("listPopulation");
+                        for (Population post : posts) { %>
                     <tr>
-                        <td><%=post.getId()%>
-                        </td>
                         <td><%=post.getMunId()%>
                         </td>
                         <td><%=post.getDisId()%>
                         </td>
-                        <td><%=post.getName()%>
+                        <td><%=post.getHouseholds()%>
                         </td>
-                        <td><a href="/editVillage?id=<%=post.getId()%>"><h5>Modifica</h5></a></td>
-                        <td><a href="/deleteVillage?id=<%=post.getId()%>"><h5>Sterge</h5></a></td>
+                        <td><%=post.getMalePop()%>
+                        </td>
+                        <td><%=post.getFempop()%>
+                        </td>
+                        <td><%=post.getDensity()%>
+                        </td>
+                        <td><a href="/editPopulation?id=<%=post.getMunId()%>"><h5>Modifica</h5></a></td>
+                        <td><a href="/deletePopulation?id=<%=post.getMunId()%>"><h5>Sterge</h5></a></td>
                     </tr>
                     <%}%>
                 </table>

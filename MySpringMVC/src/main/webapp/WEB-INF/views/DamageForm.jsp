@@ -49,7 +49,7 @@
 
                 <% Damage post = (Damage) request.getAttribute("Damage");
                 %>
-                <form action="saveDamage" method="post">
+                <form action="saveDamage" method="post" modelAttribute="Damage">
                     <table>
                         <tr>
                             <td> District ID</td>
