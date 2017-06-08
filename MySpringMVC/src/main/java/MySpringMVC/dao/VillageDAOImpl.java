@@ -25,18 +25,18 @@ public class VillageDAOImpl implements VillageDAO{
     public void saveOrUpdate(Village village) {
         if (get(village.getId()) != null) {
             // update
-            String sql = "UPDATE VILLAGES SET name=? WHERE vil_id = ? and mun_id=? and DIS_ID = ? ";
-            jdbcTemplate.update(sql, village.getName(), village.getId(),village.getMunId(),village.getDisId());
+            String sql = "UPDATE VILLAGES SET NAME = ?, MUN_ID = ?, DIS_ID = ? WHERE VIL_ID = ? ";
+            jdbcTemplate.update(sql, village.getName(), village.getMunId(), village.getDisId(), village.getId());
         } else {
             // insert
-            String sql = "INSERT INTO VILLAGES (VIL_ID,mun_id,dis_id, name) VALUES (?,?, ?, ?)";
-            jdbcTemplate.update(sql, village.getId(),village.getMunId(),village.getDisId(),village.getName());
+            String sql = "INSERT INTO VILLAGES (VIL_ID, MUN_ID, DIS_ID, NAME) VALUES (?, ?, ?, ?)";
+            jdbcTemplate.update(sql, village.getId(), village.getMunId(), village.getDisId(), village.getName());
         }
     }
 
     @Override
     public void delete(int id) {
-        String sql = "DELETE FROM VILLAGES WHERE VIL_ID=?";
+        String sql = "DELETE FROM VILLAGES WHERE VIL_ID = ?";
         jdbcTemplate.update(sql, id);
     }
 
@@ -65,7 +65,7 @@ public class VillageDAOImpl implements VillageDAO{
 
     @Override
     public List<Village> list() {
-        String sql = "SELECT * FROM VILLAGES order by name";
+        String sql = "SELECT * FROM VILLAGES ORDER BY NAME";
         List<Village> listVillage = jdbcTemplate.query(sql, new RowMapper<Village>() {
 
             @Override

@@ -13,6 +13,7 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 
 import javax.sql.DataSource;
@@ -20,6 +21,7 @@ import javax.sql.DataSource;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.jdbc.core.RowMapper;
 
 import MySpringMVC.model.District;
 import MySpringMVC.model.Municipality;
@@ -62,51 +64,16 @@ public class TablesDAOImpl {
 
         try {
             br = new BufferedReader(new FileReader(file));
+            line = br.readLine();
             while ((line = br.readLine()) != null) {
 
                 String[] columns = line.split(separator);
 
-                sql = "SELECT * FROM DISTRICTS WHERE NAME = ? ";
-                District district = jdbcTemplate.query(sql, new ResultSetExtractor<District>() {
+                sql = "INSERT INTO POPULATION(DIS_ID, MUN_ID, HOUSEHOLDS, MALE_POP, FEM_POP, DENSITY) " +
+                        "VALUES(" + columns[0] + ", " + columns[2] + ", " + columns[9] +
+                        ", " + columns[11] + ", " + columns[12] + ", " + columns[13] + ") ";
 
-                    @Override
-                    public District extractData(ResultSet rs) throws SQLException,
-                            DataAccessException {
-                        if (rs.next()) {
-                            District contact = new District();
-                            contact.setId(rs.getInt("dis_id"));
-                            contact.setName(rs.getString("name"));
-                            return contact;
-                        }
-                        return null;
-                    }
-                });
-
-                sql = "SELECT * FROM MUNICIPALITIES WHERE NAME = ? ";
-                jdbcTemplate.update(sql, columns[0]);
-                Municipality municipality = jdbcTemplate.query(sql, new ResultSetExtractor<Municipality>() {
-
-                    @Override
-                    public Municipality extractData(ResultSet rs) throws SQLException,
-                            DataAccessException {
-                        if (rs.next()) {
-                            Municipality contact = new Municipality();
-                            contact.setId(rs.getInt("dis_id"));
-                            contact.setName(rs.getString("name"));
-                            return contact;
-                        }
-                        return null;
-                    }
-                });
-
-                sql = "INSERT INTO POPULATION(DIS_ID, MUN_ID, HOUSEHOLDS, MALE_POP, FEM_POP, DENSITY) VALUES (?, ?, ?, ?, ?, ?) ";
-                jdbcTemplate.update(sql, district.getId(), municipality.getId(), columns[3], columns[4],
-                        columns[9], columns[11], columns[12], columns[13]);
-
-                for (int i = 0; i < columns.length; i++) {
-                    System.out.println(columns[i] + " ");
-                }
-
+                jdbcTemplate.update(sql);
             }
 
         } catch (IOException e) {
@@ -131,8 +98,6 @@ public class TablesDAOImpl {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-
-        System.out.println(path);
 
         try {
             retrieveFile(url, path + "\\population.csv");

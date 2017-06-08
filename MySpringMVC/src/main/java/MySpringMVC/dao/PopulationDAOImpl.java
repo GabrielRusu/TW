@@ -24,12 +24,12 @@ public class PopulationDAOImpl implements PopulationDAO {
 
     @Override
     public void saveOrUpdate(Population population) {
-        if (get(population.getMunId()) != null) {
+        if (get(population.getMunId(), population.getDisId()) != null) {
             // update
-            String sql = "UPDATE POPULATION SET DIS_ID = ?, HOUSEHOLDS = ?, MALE_POP = ?, FEM_POP = ? ," +
-                    "DENSITY = ? WHERE MUN_ID = ? ";
-            jdbcTemplate.update(sql, population.getMunId(), population.getHouseholds(), population.getMalePop(),
-                    population.getFempop(), population.getDensity(), population.getDisId());
+            String sql = "UPDATE POPULATION SET HOUSEHOLDS = ?, MALE_POP = ?, FEM_POP = ? ," +
+                    "DENSITY = ? WHERE MUN_ID = ? AND DIS_ID = ? ";
+            jdbcTemplate.update(sql, population.getHouseholds(), population.getMalePop(), population.getFempop(),
+                    population.getDensity(), population.getMunId(), population.getDisId());
         } else {
             // insert
             String sql = "INSERT INTO POPULATION(DIS_ID, MUN_ID, HOUSEHOLDS, MALE_POP, FEM_POP, " +
@@ -40,14 +40,14 @@ public class PopulationDAOImpl implements PopulationDAO {
     }
 
     @Override
-    public void delete(int id) {
-        String sql = "DELETE FROM POPULATION WHERE MUN_ID = ?";
-        jdbcTemplate.update(sql, id);
+    public void delete(int mun_id, int dis_id) {
+        String sql = "DELETE FROM POPULATION WHERE MUN_ID = ? AND DIS_ID = ?";
+        jdbcTemplate.update(sql, mun_id, dis_id);
     }
 
     @Override
-    public Population get(int id) {
-        String sql = "SELECT * FROM POPULATION WHERE MUN_ID = " + id;
+    public Population get(int mun_id, int dis_id) {
+        String sql = "SELECT * FROM POPULATION WHERE MUN_ID = " + mun_id + " AND DIS_ID = " + dis_id;
         return jdbcTemplate.query(sql, new ResultSetExtractor<Population>() {
 
             @Override

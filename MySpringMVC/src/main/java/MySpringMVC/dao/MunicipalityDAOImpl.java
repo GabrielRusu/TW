@@ -33,7 +33,7 @@ public class MunicipalityDAOImpl implements MunicipalityDAO {
 
     @Override
     public void delete(int id) {
-        String sql = "DELETE FROM MUNICIPALITIES WHERE mun_id=?";
+        String sql = "DELETE FROM MUNICIPALITIES WHERE MUN_ID = ?";
         jdbcTemplate.update(sql, id);
     }
 

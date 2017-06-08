@@ -31,24 +31,14 @@
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Edit/Add District</h1>
-
-                <a href="/viewDistrict">VIEW DISTRICT</a>
-
-                <div id="view">
-                    <a href="/viewCluster">Clusters</a>
-                    <a href="/viewDamage">Damages</a>
-                    <a href="/viewDistrict">Districts</a>
-                    <a href="/viewEarthquake">Earthquakes</a>
-                    <a href="/viewMunicipality">Municipalities</a>
-                    <a href="/viewVillage">Villages</a>
-                </div>
+                <h1>Modifica tabelele</h1>
 
                 <table>
                     <tr>
-                        <td><h3> Updateaza toate tabelele </h3>
-                            <p> <h4> Updateaza automat toate tabelele apasand butonul de mai jos.
-                                Atentie: Acest proces dureaza 10 minute ??</h4> </p>
+                        <td><h3> Population </h3>
+                            <p> <h4> Datele despre fiecare municipiu in parte sunt in acest tabel,
+                            cu date despre populatie: numar de oameni, gospodarii si densitatea populatiei</h4> </p>
+                            <a href="/viewPopulation">GO TO</a>
                             <a href="/updateTables">UPDATE</a>
                         </td>
 

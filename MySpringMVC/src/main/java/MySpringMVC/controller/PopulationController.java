@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,7 +15,9 @@ import org.springframework.web.servlet.ModelAndView;
 import MySpringMVC.dao.PopulationDAO;
 import MySpringMVC.model.Population;
 
+@Controller
 public class PopulationController {
+
     @Autowired
     private PopulationDAO populationDAO;
 
@@ -30,7 +33,7 @@ public class PopulationController {
     @RequestMapping(value = "/newPopulation", method = RequestMethod.GET)
     public ModelAndView newPopulation(ModelAndView model) {
         Population newPopulation = new Population();
-        model.addObject("Population", newPopulation);
+        model.addObject("population", newPopulation);
         model.setViewName("PopulationForm");
         return model;
     }
@@ -43,17 +46,19 @@ public class PopulationController {
 
     @RequestMapping(value = "/deletePopulation", method = RequestMethod.GET)
     public ModelAndView deletePopulation(HttpServletRequest request) {
-        int id = Integer.parseInt(request.getParameter("mun_id"));
-        populationDAO.delete(id);
+        int mun_id = Integer.parseInt(request.getParameter("mun_id"));
+        int dis_id = Integer.parseInt(request.getParameter("dis_id"));
+        populationDAO.delete(mun_id, dis_id);
         return new ModelAndView("redirect:/viewPopulation");
     }
 
     @RequestMapping(value = "/editPopulation", method = RequestMethod.GET)
     public ModelAndView editPopulation(HttpServletRequest request) {
-        int id = Integer.parseInt(request.getParameter("mun_id"));
-        Population population = populationDAO.get(id);
+        int mun_id = Integer.parseInt(request.getParameter("mun_id"));
+        int dis_id = Integer.parseInt(request.getParameter("dis_id"));
+        Population population = populationDAO.get(mun_id, dis_id);
         ModelAndView model = new ModelAndView("PopulationForm");
-        model.addObject("Population", population);
+        model.addObject("population", population);
 
         return model;
     }

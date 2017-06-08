@@ -26,7 +26,7 @@ public class DamageDAOImpl implements DamageDAO {
     public void saveOrUpdate(Damage damage) {
         if (get(damage.getDisId()) != null) {
             // update - not female death and injured
-            String sql = "UPDATE DAMAGES SET MALE_DEATH = ? , FEM_DEATH = ?, MALE_INJURED = ?, FEM_INJURED = ?, " +
+            String sql = "UPDATE DAMAGES SET MALE_DEATH = ?, FEM_DEATH = ?, MALE_INJURED = ?, FEM_INJURED = ?, " +
                     "PUBLIC_DAMAGED = ? WHERE DIS_ID = ?";
             jdbcTemplate.update(sql, damage.getMaleDeath(), damage.getFemDeath(), damage.getMaleInjured(),
                     damage.getFemInjured(), damage.getPublicDamages(), damage.getDisId());
