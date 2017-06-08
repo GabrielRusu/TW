@@ -93,6 +93,65 @@
 		<url-pattern>/viewVillage</url-pattern>
 	</servlet-mapping>
 
+    <servlet>
+        <servlet-name>EarthquakeView</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>MySpringMVC</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EarthquakeView</servlet-name>
+        <url-pattern>/viewEarthquake</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DamageView</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>MySpringMVC</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DamageView</servlet-name>
+        <url-pattern>/viewDamage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClusterView</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>MySpringMVC</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClusterView</servlet-name>
+        <url-pattern>/viewCluster</url-pattern>
+    </servlet-mapping>
 
 
 	<servlet>

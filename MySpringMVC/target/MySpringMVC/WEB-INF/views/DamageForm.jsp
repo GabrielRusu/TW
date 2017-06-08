@@ -1,4 +1,4 @@
-<%@ page import="MySpringMVC.model.Village" %>
+<%@ page import="MySpringMVC.model.Damage" %>
 
 <%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -40,27 +40,35 @@
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Edit/Add Village</h1>
+                <h1>Edit/Add Damage</h1>
 
-                <% Village post = (Village) request.getAttribute("Village");
+                <% Damage post = (Damage) request.getAttribute("Damage");
                 %>
-                <form action="saveVillage" method="post">
+                <form action="saveDamage" method="post">
                     <table>
                         <tr>
-                            <td> ID</td>
-                            <td><input type="text" name="id" path="id" value="<%=post.getId()%>"></td>
-                        </tr>
-                        <tr>
-                            <td> munId</td>
-                            <td><input type="text" name="munId" path="munId" value="<%=post.getMunId()%>"></td>
-                        </tr>
-                        <tr>
                             <td> disID</td>
-                            <td><input type="text" name="disID" path="disID" value="<%=post.getDisId()%>"></td>
+                            <td><input type="text" name="disId" path="disId" value="<%=post.getDisId()%>"></td>
                         </tr>
                         <tr>
-                            <td> Name</td>
-                            <td><input type="text" name="name" path="name" value="<%=post.getName()%>"></td>
+                            <td> maleDeath</td>
+                            <td><input type="text" name="maleDeath" path="MaleDeath" value="<%=post.getMaleDeath()%>"></td>
+                        </tr>
+                        <tr>
+                            <td> femDeath</td>
+                            <td><input type="text" name="femaleDeath" path="femaleDeath" value="<%=post.getFemDeath()%>"></td>
+                        </tr>
+                        <tr>
+                            <td> maleInjured</td>
+                            <td><input type="text" name="maleInjured" path="MaleInjured" value="<%=post.getMaleInjured()%>"></td>
+                        </tr>
+                        <tr>
+                            <td> femaleInjured</td>
+                            <td><input type="text" name="femaleInjured" path="femaleInjured" value="<%=post.getFemInjured()%>"></td>
+                        </tr>
+                        <tr>
+                            <td> publicDamages</td>
+                            <td><input type="text" name="publicDamages" path="publicDamages" value="<%=post.getPublicDamages()%>"></td>
                         </tr>
                         <tr>
                             <td></td>

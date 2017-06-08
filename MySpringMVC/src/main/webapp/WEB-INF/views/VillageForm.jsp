@@ -51,7 +51,7 @@
                             <td><input type="text" name="id" path="id" value="<%=post.getId()%>"></td>
                         </tr>
                         <tr>
-                            <td> ID</td>
+                            <td> munId</td>
                             <td><input type="text" name="munId" path="munId" value="<%=post.getMunId()%>"></td>
                         </tr>
                         <tr>
