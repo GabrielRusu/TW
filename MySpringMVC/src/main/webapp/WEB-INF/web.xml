@@ -174,10 +174,46 @@
         <url-pattern>/viewTables</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ChartView</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>MySpringMVC</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChartView</servlet-name>
+        <url-pattern>/viewChart</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GraphView</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>MySpringMVC</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GraphView</servlet-name>
+        <url-pattern>/viewGraph</url-pattern>
+    </servlet-mapping>
 
-
-    
     <servlet>
         <servlet-name>MapView</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -196,6 +232,27 @@
     <servlet-mapping>
         <servlet-name>MapView</servlet-name>
         <url-pattern>/viewMap</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SimpleTableView</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>MySpringMVC</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SimpleTableView</servlet-name>
+        <url-pattern>/viewSimpleTable</url-pattern>
     </servlet-mapping>
 
     <session-config>

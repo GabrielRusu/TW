@@ -22,7 +22,7 @@ public class DamageDAOImpl implements DamageDAO{
     @Override
     public void saveOrUpdate(Damage Damage) {
         if (get(Damage.getDisId()) != null) {
-            // update
+            // update - not female death and injured
             String sql = "UPDATE DAMAGES SET MALE_DEATH = ? , FEM_DEATH = ?,MALE_INJURED = ?, FEM_INJURED = ?, PUBLIC_DAMAGED = ? WHERE DIS_ID = ?";
             jdbcTemplate.update(sql, Damage.getMaleDeath(),Damage.getFemDeath(),Damage.getMaleInjured(),Damage.getFemInjured(),Damage.getPublicDamages(), Damage.getDisId());
         } else {
