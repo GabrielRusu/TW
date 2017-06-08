@@ -82,4 +82,8 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
         return new TablesDAOImpl(getDataSource());
     }
 
+    @Bean
+    public MapViewDAOImpl getMapViewDAO() {
+        return new MapViewDAOImpl(getDataSource());
+    }
 }
