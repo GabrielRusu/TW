@@ -7,6 +7,7 @@ import MySpringMVC.model.Damage;
 import MySpringMVC.model.Earthquake;
 import MySpringMVC.model.Municipality;
 import MySpringMVC.model.Village;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -76,12 +77,10 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
         return new ClusterDAOImpl(getDataSource());
     }
 
-
     @Bean
     public TablesDAOImpl getTablesDAO() {
         return new TablesDAOImpl(getDataSource());
     }
-
 
     @Bean
     public ChartViewDAOImpl getChartViewDAO() {

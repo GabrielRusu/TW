@@ -29,7 +29,7 @@
         <a href="/viewSimpleTable">Tabel</a>
         <a href="/viewGraph">Grafic</a>
         <a href="/viewChart">Chart</a>
-        <a href="/viewMap">Harta</a>
+        <a href="/viewMap?hazard=-1">Harta</a>
     </div>
 
     <section id="intro">

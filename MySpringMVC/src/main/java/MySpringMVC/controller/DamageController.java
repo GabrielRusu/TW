@@ -2,6 +2,7 @@ package MySpringMVC.controller;
 
 import MySpringMVC.dao.DamageDAO;
 import MySpringMVC.model.Damage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,11 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+
 import java.io.IOException;
 import java.util.List;
 
 @Controller
 public class DamageController {
+
     @Autowired
     private DamageDAO DamageDAO;
 

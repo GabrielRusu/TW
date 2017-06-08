@@ -6,9 +6,7 @@
 <head>
     <title>INepal</title>
     <link rel="stylesheet" type="text/css" href="../../resources/crud.css"/>
-
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="../../resources/js/sidebar.js"></script>
     <script src="../../resources/js/charts.js"></script>
