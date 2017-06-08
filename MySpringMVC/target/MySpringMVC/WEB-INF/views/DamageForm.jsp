@@ -49,7 +49,7 @@
 
                 <% Damage post = (Damage) request.getAttribute("Damage");
                 %>
-                <form action="saveDamage" method="post">
+                <form action="saveDamage" method="post" modelAttribute="Damage">
                     <table>
                         <tr>
                             <td> District ID</td>
@@ -57,28 +57,28 @@
                         </tr>
                         <tr>
                             <td> Victime - barbati</td>
-                            <td><input type="text" name="maleDeath" path="MaleDeath" value="<%=post.getMaleDeath()%>">
+                            <td><input type="text" name="maleDeath" path="maleDeath" value="<%=post.getMaleDeath()%>">
                             </td>
                         </tr>
                         <tr>
                             <td> Victime - femei</td>
-                            <td><input type="text" name="femaleDeath" path="femaleDeath"
-                                       value="<%=post.getFemDeath()%>"></td>
+                            <td><input type="text" name="femDeath" path="femDeath" value="<%=post.getFemDeath()%>">
+                            </td>
                         </tr>
                         <tr>
                             <td> Raniti - barbati</td>
-                            <td><input type="text" name="maleInjured" path="MaleInjured"
-                                       value="<%=post.getMaleInjured()%>"></td>
+                            <td><input type="text" name="maleInjured" path="maleInjured" value="<%=post.getMaleInjured()%>">
+                            </td>
                         </tr>
                         <tr>
                             <td> Raniti - femei</td>
-                            <td><input type="text" name="femaleInjured" path="femaleInjured"
-                                       value="<%=post.getFemInjured()%>"></td>
+                            <td><input type="text" name="femInjured" path="femInjured" value="<%=post.getFemInjured()%>">
+                            </td>
                         </tr>
                         <tr>
                             <td> Cladiri daunate</td>
-                            <td><input type="text" name="publicDamages" path="publicDamages"
-                                       value="<%=post.getPublicDamages()%>"></td>
+                            <td><input type="text" name="publicDamages" path="publicDamages" value="<%=post.getPublicDamages()%>">
+                            </td>
                         </tr>
                         <tr>
                             <td></td>

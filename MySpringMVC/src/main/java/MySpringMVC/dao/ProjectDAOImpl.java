@@ -2,39 +2,45 @@ package MySpringMVC.dao;
 
 
 import MySpringMVC.model.Project;
+
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
 import javax.sql.DataSource;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ProjectDAOImpl implements  ProjectDAO{
+public class ProjectDAOImpl implements ProjectDAO {
 
     private JdbcTemplate jdbcTemplate;
 
     public ProjectDAOImpl(DataSource dataSource) {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
+
     @Override
     public void saveOrUpdate(Project Project) {
         if (get(Project.getMunId()) != null) {
             // update
-            String sql = "UPDATE PROJECTS SET item = ? , total = ? , unit = ? WHERE CLUS_ID = ? and DIS_ID = ? and mun_id=? ";
-            jdbcTemplate.update(sql, Project.getItem(), Project.getTotal(), Project.getUnit(),Project.getClusId(),Project.getDisId(),Project.getMunId());
+            String sql = "UPDATE PROJECTS SET ITEM = ?, TOTAL = ?, UNIT = ? WHERE CLUS_ID = ? AND DIS_ID = ? AND MUN_ID = ? ";
+            jdbcTemplate.update(sql, Project.getItem(), Project.getTotal(), Project.getUnit(), Project.getClusId(),
+                    Project.getDisId(), Project.getMunId());
         } else {
             // insert
-            String sql = "INSERT INTO Projects (CLUS_ID,dis_id,mun_id, ACTIVITY_TYPE,item,total,unit) VALUES (?, ?, ?,?, ?, ?, ?)";
-            jdbcTemplate.update(sql, Project.getClusId(),Project.getDisId(),Project.getMunId(),Project.getActivityType(),Project.getItem(),Project.getTotal(),Project.getUnit());
+            String sql = "INSERT INTO Projects (CLUS_ID, DIS_ID, MUN_ID, ACTIVITY_TYPE, ITEM, " +
+                    "TOTAL, UNIT) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            jdbcTemplate.update(sql, Project.getClusId(), Project.getDisId(), Project.getMunId(),
+                    Project.getActivityType(), Project.getItem(), Project.getTotal(), Project.getUnit());
         }
     }
 
     @Override
     public void delete(int id) {
-        String sql = "DELETE FROM PROJECTS WHERE mun_id=?";
+        String sql = "DELETE FROM PROJECTS WHERE MUN_ID = ?";
         jdbcTemplate.update(sql, id);
     }
 
@@ -57,7 +63,6 @@ public class ProjectDAOImpl implements  ProjectDAO{
                     contact.setUnit(rs.getString("unit"));
                     return contact;
                 }
-
                 return null;
             }
 
@@ -66,7 +71,7 @@ public class ProjectDAOImpl implements  ProjectDAO{
 
     @Override
     public List<Project> list() {
-        String sql = "SELECT * FROM PROJECTS clus_id";
+        String sql = "SELECT * FROM PROJECTS ";
         List<Project> listProject = jdbcTemplate.query(sql, new RowMapper<Project>() {
 
             @Override

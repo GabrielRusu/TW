@@ -13,9 +13,6 @@ import org.springframework.jdbc.core.RowMapper;
 
 import MySpringMVC.model.District;
 
-/**
- * Created by Gabriel Rusu on 07-Jun-17.
- */
 public class SimpleTableViewDAOImpl {
 
 

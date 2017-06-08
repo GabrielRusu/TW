@@ -1,18 +1,33 @@
 package MySpringMVC.dao;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
 
 
 import javax.sql.DataSource;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.jdbc.core.RowMapper;
+
+import MySpringMVC.model.District;
+import MySpringMVC.model.Municipality;
+import MySpringMVC.model.Population;
+import javafx.scene.control.Cell;
+import javafx.util.Pair;
 
 
 public class TablesDAOImpl {
@@ -39,9 +54,37 @@ public class TablesDAOImpl {
         stream.close();
     }
 
+    public void importPopulation(String file) {
+        String line = "";
+        String separator = ",";
+        BufferedReader br = null;
 
-    public void update() {
-        String url = "https://data.humdata.org/dataset/9feb2044-2e3f-40de-9317-afb1f55b2e63/resource/b383fecf-a068-4b32-8694-eb8919296b24/download/";
+        String sql = "DELETE FROM POPULATION WHERE DIS_ID != 0";
+        jdbcTemplate.update(sql);
+
+        try {
+            br = new BufferedReader(new FileReader(file));
+            line = br.readLine();
+            while ((line = br.readLine()) != null) {
+
+                String[] columns = line.split(separator);
+
+                sql = "INSERT INTO POPULATION(DIS_ID, MUN_ID, HOUSEHOLDS, MALE_POP, FEM_POP, DENSITY) " +
+                        "VALUES(" + columns[0] + ", " + columns[2] + ", " + columns[9] +
+                        ", " + columns[11] + ", " + columns[12] + ", " + columns[13] + ") ";
+
+                jdbcTemplate.update(sql);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void updatePopulation() {
+        String url = "https://data.humdata.org/dataset/e71f53d9-2339-4df5-b76e-397957ec65dc/resource/1f6474a1-a0c3-4646-8f16-b57a4f5411cf/download/npl-popt-adm4-2011-wfp.csv";
         File f = new File(TablesDAOImpl.class.getProtectionDomain().getCodeSource().getLocation().getPath());
         String path;
 
@@ -56,14 +99,15 @@ public class TablesDAOImpl {
             e.printStackTrace();
         }
 
-        System.out.println(path);
-
         try {
-            retrieveFile(url, path + "\\bla.xlsx");
+            retrieveFile(url, path + "\\population.csv");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+        importPopulation(path + "\\population.csv");
+
     }
+
 
 }

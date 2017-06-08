@@ -78,10 +78,19 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    public ProjectDAO getProjectDAO() { return new ProjectDAOImpl(getDataSource()); }
+    public PopulationDAO getPopulationDAO() {
+        return new PopulationDAOImpl(getDataSource());
+    }
 
     @Bean
-    public OrganisationDAO getOrganisationDAO() { return new OrganisationDAOImpl(getDataSource()); }
+    public ProjectDAO getProjectDAO() {
+        return new ProjectDAOImpl(getDataSource());
+    }
+
+    @Bean
+    public OrganisationDAO getOrganisationDAO() {
+        return new OrganisationDAOImpl(getDataSource());
+    }
 
     @Bean
     public TablesDAOImpl getTablesDAO() {

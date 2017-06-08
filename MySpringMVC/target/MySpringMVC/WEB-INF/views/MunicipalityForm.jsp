@@ -58,7 +58,7 @@
                         </tr>
                         <tr>
                             <td> District ID</td>
-                            <td><input type="text" name="disID" path="disID" value="<%=post.getDisId()%>"></td>
+                            <td><input type="text" name="disId" path="disId" value="<%=post.getDisId()%>"></td>
                         </tr>
                         <tr>
                             <td> Nume</td>

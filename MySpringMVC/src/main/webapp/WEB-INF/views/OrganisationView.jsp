@@ -12,30 +12,24 @@
 <head>
     <title>INepal</title>
     <link rel="stylesheet" type="text/css" href="../../resources/crud.css"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="../../resources/js/sidebar.js"></script>
-    <script src="../../resources/js/charts.js"></script>
 </head>
 <body>
 
 <div id="header">
     <div class="menu">
-        <a href="/home#intro">INTRODUCERE</a>
-        <a href="/home#first">DETALII</a>
-        <a href="/home#second">APLICATII</a>
-        <a href="/home#voluntar">FII VOLUNTAR!</a>
-        <a href="/home#third">FINAL</a>
+        <a href="/#intro">INTRODUCERE</a>
+        <a href="/#first">DETALII</a>
+        <a href="/#second">APLICATII</a>
+        <a href="/#voluntar">FII VOLUNTAR!</a>
+        <a href="/#third">FINAL</a>
     </div>
 </div>
 
 <div id="main-app">
 
     <div id="view">
-        <a href="table.html">Tabel</a>
-        <a href="graphic.html">Grafic</a>
-        <a href="chart.html">Chart</a>
-        <a href="map.html">Harta</a>
+        <a href="/viewTables">Intoarce-te la tabele</a>
     </div>
 
     <div align="center">
@@ -47,11 +41,10 @@
 
                 <table>
                     <th>ID</th>
-                    <th>clusId</th>
-                    <th>Name</th>
-                    <th>Acronym</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Cluster ID</th>
+                    <th>Nume</th>
+                    <th>Acronim</th>
+
 
                     <% ArrayList<Organisation> posts = (ArrayList<Organisation>) request.getAttribute("listOrganisation");
                         for (Organisation post : posts) { %>
