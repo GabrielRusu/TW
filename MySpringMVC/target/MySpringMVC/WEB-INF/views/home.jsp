@@ -17,7 +17,7 @@
 
 <div id="sidebar">
     <div class="menu">
-        <a href="#intro">INTRODUCERE</a>
+        <a href="#intro" style="background: deepskyblue;">INTRODUCERE</a>
         <a href="#first">DETALII</a>
         <a href="#second">APLICATII</a>
         <a href="#voluntar">FII VOLUNTAR!</a>

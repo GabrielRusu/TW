@@ -39,8 +39,8 @@ public class DamageController {
     }
 
     @RequestMapping(value = "/saveDamage", method = RequestMethod.POST)
-    public ModelAndView saveDamage(@ModelAttribute Damage Damage) {
-        DamageDAO.saveOrUpdate(Damage);
+    public ModelAndView saveDamage(@ModelAttribute Damage damage) {
+        DamageDAO.saveOrUpdate(damage);
         return new ModelAndView("redirect:/viewDamage");
     }
 
@@ -54,9 +54,9 @@ public class DamageController {
     @RequestMapping(value = "/editDamage", method = RequestMethod.GET)
     public ModelAndView editDamage(HttpServletRequest request) {
         int dis_id = Integer.parseInt(request.getParameter("dis_id"));
-        Damage Damage = DamageDAO.get(dis_id);
+        Damage damage = DamageDAO.get(dis_id);
         ModelAndView model = new ModelAndView("DamageForm");
-        model.addObject("Damage", Damage);
+        model.addObject("Damage", damage);
 
         return model;
     }

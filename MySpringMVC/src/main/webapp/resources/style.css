@@ -168,22 +168,9 @@ table tr {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/*
-tr:nth-child(odd) td:nth-child(even) {
-    background-color: #600000;
-
-}*/
-
 table td {
     padding: 0.75em 0.75em;
 }
-
-/*
-tr:nth-child(even) td:nth-child(odd) {
-    background-color: #600000;
-}*/
-
-
 
 div#map {
     margin: 0 auto;

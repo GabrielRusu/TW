@@ -42,35 +42,43 @@
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Edit/Add Damage</h1>
+                <h2>Modifica/Adauga un Damage</h2>
+
+                <h3>Pentru a introduce un nou Damage, adaugati un ID inexistent si restul datelor</h3>
+                <h3>Pentru a modifica un Damage existent, modificati doar campurile in afara de District ID</h3>
 
                 <% Damage post = (Damage) request.getAttribute("Damage");
                 %>
                 <form action="saveDamage" method="post">
                     <table>
                         <tr>
-                            <td> disID</td>
+                            <td> District ID</td>
                             <td><input type="text" name="disId" path="disId" value="<%=post.getDisId()%>"></td>
                         </tr>
                         <tr>
-                            <td> maleDeath</td>
-                            <td><input type="text" name="maleDeath" path="MaleDeath" value="<%=post.getMaleDeath()%>"></td>
+                            <td> Victime - barbati</td>
+                            <td><input type="text" name="maleDeath" path="MaleDeath" value="<%=post.getMaleDeath()%>">
+                            </td>
                         </tr>
                         <tr>
-                            <td> femDeath</td>
-                            <td><input type="text" name="femaleDeath" path="femaleDeath" value="<%=post.getFemDeath()%>"></td>
+                            <td> Victime - femei</td>
+                            <td><input type="text" name="femaleDeath" path="femaleDeath"
+                                       value="<%=post.getFemDeath()%>"></td>
                         </tr>
                         <tr>
-                            <td> maleInjured</td>
-                            <td><input type="text" name="maleInjured" path="MaleInjured" value="<%=post.getMaleInjured()%>"></td>
+                            <td> Raniti - barbati</td>
+                            <td><input type="text" name="maleInjured" path="MaleInjured"
+                                       value="<%=post.getMaleInjured()%>"></td>
                         </tr>
                         <tr>
-                            <td> femaleInjured</td>
-                            <td><input type="text" name="femaleInjured" path="femaleInjured" value="<%=post.getFemInjured()%>"></td>
+                            <td> Raniti - femei</td>
+                            <td><input type="text" name="femaleInjured" path="femaleInjured"
+                                       value="<%=post.getFemInjured()%>"></td>
                         </tr>
                         <tr>
-                            <td> publicDamages</td>
-                            <td><input type="text" name="publicDamages" path="publicDamages" value="<%=post.getPublicDamages()%>"></td>
+                            <td> Cladiri daunate</td>
+                            <td><input type="text" name="publicDamages" path="publicDamages"
+                                       value="<%=post.getPublicDamages()%>"></td>
                         </tr>
                         <tr>
                             <td></td>

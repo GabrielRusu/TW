@@ -2,13 +2,16 @@ package MySpringMVC.dao;
 
 
 import MySpringMVC.model.Earthquake;
+
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
+
 import sun.security.krb5.internal.EncAPRepPart;
 
 import javax.sql.DataSource;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -26,12 +29,13 @@ public class EarthquakeDAOImpl implements EarthquakeDAO {
     public void saveOrUpdate(Earthquake earthquake) {
         if (get(earthquake.getId()) != null) {
             // update
-            String sql = "UPDATE Earthquakes SET hazard=? WHERE quake_id = ? and mun_id=? and DIS_ID = ?";
-            jdbcTemplate.update(sql, earthquake.getHazard(), earthquake.getId(),earthquake.getMunId(),earthquake.getDisId() );
+            String sql = "UPDATE Earthquakes SET HAZARD = ?, MUN_ID = ?, DIS_ID = ? WHERE QUAKE_ID = ?";
+            jdbcTemplate.update(sql, earthquake.getHazard(), earthquake.getMunId(), earthquake.getDisId(), earthquake.getId());
         } else {
             // insert
-            String sql = "INSERT INTO EARTHQUAKES (QUAKE_ID,dis_id,mun_id,TIME_STAMP,HAZARD) VALUES (?, ?, ?,?,?)";
-            jdbcTemplate.update(sql, earthquake.getId(),earthquake.getDisId(),earthquake.getMunId(),earthquake.getDate(),earthquake.getHazard());
+            String sql = "INSERT INTO EARTHQUAKES (QUAKE_ID, DIS_ID, MUN_ID, TIME_STAMP, HAZARD) VALUES (?, ?, ?, ?, ?)";
+            jdbcTemplate.update(sql, earthquake.getId(), earthquake.getDisId(), earthquake.getMunId(),
+                    earthquake.getDate(), earthquake.getHazard());
         }
     }
 
@@ -67,7 +71,7 @@ public class EarthquakeDAOImpl implements EarthquakeDAO {
 
     @Override
     public List<Earthquake> list() {
-        String sql = "SELECT * FROM EARTHQUAKES order by HAZARD DESC ";
+        String sql = "SELECT * FROM EARTHQUAKES ORDER BY HAZARD DESC ";
         List<Earthquake> listEarthquake = jdbcTemplate.query(sql, new RowMapper<Earthquake>() {
 
             @Override

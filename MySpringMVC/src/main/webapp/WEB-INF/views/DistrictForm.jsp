@@ -42,7 +42,10 @@
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Edit/Add District</h1>
+                <h2>Modifica/Adauga un District</h2>
+
+                <h3>Pentru a introduce un nou District, adaugati un ID inexistent</h3>
+                <h3>Pentru a modifica un District existent, modificati doar numele</h3>
 
                 <% District post = (District) request.getAttribute("district");
                 %>
@@ -53,7 +56,7 @@
                             <td><input type="text" name="id" path="id" value="<%=post.getId()%>"></td>
                         </tr>
                         <tr>
-                            <td> Name</td>
+                            <td> Nume</td>
                             <td><input type="text" name="name" path="name" value="<%=post.getName()%>"></td>
                         </tr>
                         <tr>

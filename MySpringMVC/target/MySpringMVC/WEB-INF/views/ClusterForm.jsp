@@ -42,18 +42,21 @@
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Edit/Add Cluster</h1>
+                <h2>Modifica/Adauga un Cluster</h2>
+
+                <h3>Pentru a introduce un nou Cluster, adaugati un ID inexistent</h3>
+                <h3>Pentru a modifica un Cluster existent, modificati doar numele</h3>
 
                 <% Cluster post = (Cluster) request.getAttribute("Cluster");
                 %>
                 <form action="saveCluster" method="post" modelAttribute="Cluster">
                     <table>
                         <tr>
-                            <td> ID</td>
+                            <td>ID</td>
                             <td><input type="text" name="id" path="id" value="<%=post.getId()%>"></td>
                         </tr>
                         <tr>
-                            <td> Name</td>
+                            <td>Nume</td>
                             <td><input type="text" name="name" path="name" value="<%=post.getName()%>"></td>
                         </tr>
                         <tr>

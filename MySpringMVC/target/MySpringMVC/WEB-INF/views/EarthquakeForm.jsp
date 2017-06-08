@@ -42,7 +42,10 @@
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Edit/Add Earthquake</h1>
+                <h2>Modifica/Adauga un Earthquake</h2>
+
+                <h3>Pentru a introduce un nou Earthquake, adaugati un ID inexistent si restul datelor</h3>
+                <h3>Pentru a modifica un Earthquake existent, modificati orice in afara de ID</h3>
 
                 <% Earthquake post = (Earthquake) request.getAttribute("Earthquake");
                 %>
@@ -53,19 +56,19 @@
                             <td><input type="text" name="id" path="id" value="<%=post.getId()%>"></td>
                         </tr>
                         <tr>
-                            <td> disID</td>
+                            <td> District ID</td>
                             <td><input type="text" name="disID" path="disID" value="<%=post.getDisId()%>"></td>
                         </tr>
                         <tr>
-                            <td> munID</td>
+                            <td> Municipiu ID</td>
                             <td><input type="text" name="munID" path="disID" value="<%=post.getMunId()%>"></td>
                         </tr>
                         <tr>
-                            <td> date</td>
+                            <td> Data</td>
                             <td><input type="text" name="date" path="date" value="<%=post.getDate()%>"></td>
                         </tr>
                         <tr>
-                            <td> hazard</td>
+                            <td> Gravitate (0 - 10)</td>
                             <td><input type="text" name="hazard" path="hazard" value="<%=post.getHazard()%>"></td>
                         </tr>
                         <tr>

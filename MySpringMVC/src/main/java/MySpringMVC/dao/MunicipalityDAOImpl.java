@@ -22,12 +22,12 @@ public class MunicipalityDAOImpl implements MunicipalityDAO {
     public void saveOrUpdate(Municipality municipality) {
         if (get(municipality.getId()) != null) {
             // update
-            String sql = "UPDATE municipalities SET name=? WHERE mun_id=? and DIS_ID = ?";
-            jdbcTemplate.update(sql, municipality.getName(), municipality.getId(), municipality.getDisId());
+            String sql = "UPDATE municipalities SET NAME = ?, DIS_ID = ? WHERE MUN_ID = ?";
+            jdbcTemplate.update(sql, municipality.getName(), municipality.getDisId(), municipality.getId());
         } else {
             // insert
-            String sql = "INSERT INTO municipalities (mun_id,dis_id, name) VALUES (?, ?, ?)";
-            jdbcTemplate.update(sql, municipality.getId(),municipality.getDisId(),municipality.getName());
+            String sql = "INSERT INTO municipalities(MUN_ID, DIS_ID, NAME) VALUES (?, ?, ?)";
+            jdbcTemplate.update(sql, municipality.getId(), municipality.getDisId(), municipality.getName());
         }
     }
 

@@ -8,8 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../../resources/style.css"/>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="../../resources/js/sidebar.js"></script>
-    <script src="../../resources/js/charts.js"></script>
+
 </head>
 <body>
 
@@ -36,10 +35,35 @@
         <div class="article-intro">
 
             <div class="container">
-                <center>
-                    <div id="chart_div" width="75%"></div>
-                </center>
+                <div id="chart_div"></div>
             </div>
+
+            <script>
+                google.charts.load('current', {'packages':['corechart']});
+
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Topping');
+                    data.addColumn('number', 'Slices');
+                    data.addRows([
+                        ['Kathmandu', 3],
+                        ['Taluka', 1],
+                        ['Khandanpur', 1],
+                        ['Hetauda', 1],
+                        ['Bidur', 2]
+                    ]);
+
+                    var options = {'title':'Affected zones',
+                        'width':"70%",
+                        'height':"60%"};
+
+                    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                    chart.draw(data, options);
+                }
+            </script>
 
             <h3>Chart</h3>
             <p>

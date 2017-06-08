@@ -45,11 +45,11 @@
             <div class="article-intro">
 
                 <h1>District List</h1>
-                <a href="newDistrict"><h4>New District</h4></a>
+                <a href="newDistrict"><h5>Adauga un nou District</h5></a>
 
                 <table>
                     <th>ID</th>
-                    <th>Name</th>
+                    <th>Nume</th>
                     <th>Edit</th>
                     <th>Delete</th>
 
@@ -60,8 +60,8 @@
                         </td>
                         <td><%=post.getName()%>
                         </td>
-                        <td><a href="/editDistrict?id=<%=post.getId()%>"><h5>Edit</h5></a></td>
-                        <td><a href="/deleteDistrict?id=<%=post.getId()%>"><h5>Delete</h5></a></td>
+                        <td><a href="/editDistrict?id=<%=post.getId()%>"><h5>Modifica</h5></a></td>
+                        <td><a href="/deleteDistrict?id=<%=post.getId()%>"><h5>Sterge</h5></a></td>
                     </tr>
                     <%}%>
                 </table>

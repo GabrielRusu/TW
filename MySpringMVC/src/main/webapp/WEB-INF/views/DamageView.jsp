@@ -45,17 +45,17 @@
             <div class="article-intro">
 
                 <h1>Damage List</h1>
-                <a href="newDamage"><h4>New Damage</h4></a>
+                <a href="newDamage"><h5>Adauga un nou Damage</h5></a>
 
                 <table>
-                    <th>disId</th>
-                    <th>maleDeath</th>
-                    <th>femaleDeath</th>
-                    <th>maleInjured</th>
-                    <th>femaleInjured</th>
-                    <th>publicDamages</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>District ID</th>
+                    <th>Victime - barbati</th>
+                    <th>Victime - femei</th>
+                    <th>Raniti - barbati</th>
+                    <th>Raniti - femei</th>
+                    <th>Cladiri daunate</th>
+                    <th>Modifica</th>
+                    <th>Sterge</th>
 
                     <% ArrayList<Damage> posts = (ArrayList<Damage>) request.getAttribute("listDamage");
                         for (Damage post : posts) { %>
@@ -72,8 +72,8 @@
                         </td>
                         <td><%=post.getPublicDamages()%>
                         </td>
-                        <td><a href="/editDamage?dis_id=<%=post.getDisId()%>"><h5>Edit</h5></a></td>
-                        <td><a href="/deleteDamage?dis_id=<%=post.getDisId()%>"><h5>Delete</h5></a></td>
+                        <td><a href="/editDamage?dis_id=<%=post.getDisId()%>"><h5>Modifica</h5></a></td>
+                        <td><a href="/deleteDamage?dis_id=<%=post.getDisId()%>"><h5>Sterge</h5></a></td>
                     </tr>
                     <%}%>
                 </table>

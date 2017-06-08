@@ -45,16 +45,16 @@
             <div class="article-intro">
 
                 <h1>Earthquake List</h1>
-                <a href="newEarthquake"><h4>New Earthquake</h4></a>
+                <a href="newEarthquake"><h5>Adauga un nou Earthquake</h5></a>
 
                 <table>
                     <th>ID</th>
-                    <th>disId</th>
-                    <th>munID</th>
-                    <th>date</th>
-                    <th>hazard</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>District ID</th>
+                    <th>Municipiu ID</th>
+                    <th>Data</th>
+                    <th>Gravitate</th>
+                    <th>Modifica</th>
+                    <th>Sterge</th>
 
                     <% ArrayList<Earthquake> posts = (ArrayList<Earthquake>) request.getAttribute("listEarthquake");
                         for (Earthquake post : posts) { %>
@@ -69,8 +69,8 @@
                         </td>
                         <td><%=post.getHazard()%>
                         </td>
-                        <td><a href="/editEarthquake?id=<%=post.getId()%>"><h5>Edit</h5></a></td>
-                        <td><a href="/deleteEarthquake?id=<%=post.getId()%>"><h5>Delete</h5></a></td>
+                        <td><a href="/editEarthquake?id=<%=post.getId()%>"><h5>Modifica</h5></a></td>
+                        <td><a href="/deleteEarthquake?id=<%=post.getId()%>"><h5>Sterge</h5></a></td>
                     </tr>
                     <%}%>
                 </table>

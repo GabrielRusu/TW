@@ -45,15 +45,15 @@
             <div class="article-intro">
 
                 <h1>Village List</h1>
-                <a href="newVillage"><h4>New Village</h4></a>
+                <a href="newVillage"><h5>Adauga un nou Village</h5></a>
 
                 <table>
                     <th>ID</th>
-                    <th>munId</th>
-                    <th>disId</th>
-                    <th>Name</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Municipiu ID</th>
+                    <th>District ID</th>
+                    <th>Nume</th>
+                    <th>Modifica</th>
+                    <th>Sterge</th>
 
                     <% ArrayList<Village> posts = (ArrayList<Village>) request.getAttribute("listVillage");
                         for (Village post : posts) { %>
@@ -66,8 +66,8 @@
                         </td>
                         <td><%=post.getName()%>
                         </td>
-                        <td><a href="/editVillage?id=<%=post.getId()%>"><h5>Edit</h5></a></td>
-                        <td><a href="/deleteVillage?id=<%=post.getId()%>"><h5>Delete</h5></a></td>
+                        <td><a href="/editVillage?id=<%=post.getId()%>"><h5>Modifica</h5></a></td>
+                        <td><a href="/deleteVillage?id=<%=post.getId()%>"><h5>Sterge</h5></a></td>
                     </tr>
                     <%}%>
                 </table>

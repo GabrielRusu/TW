@@ -42,7 +42,11 @@
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Edit/Add Municipality</h1>
+                <h2>Modifica/Adauga o Municipalitate</h2>
+
+                <h3>Pentru a introduce o noua Municipalitate, adaugati un ID inexistent si restul datelor</h3>
+                <h3>Pentru a modifica o Municipalitate existenta, modificati doar numele si District IDul</h3>
+
 
                 <% Municipality post = (Municipality) request.getAttribute("Municipality");
                 %>
@@ -53,11 +57,11 @@
                             <td><input type="text" name="id" path="id" value="<%=post.getId()%>"></td>
                         </tr>
                         <tr>
-                            <td> disID</td>
+                            <td> District ID</td>
                             <td><input type="text" name="disID" path="disID" value="<%=post.getDisId()%>"></td>
                         </tr>
                         <tr>
-                            <td> Name</td>
+                            <td> Nume</td>
                             <td><input type="text" name="name" path="name" value="<%=post.getName()%>"></td>
                         </tr>
                         <tr>
