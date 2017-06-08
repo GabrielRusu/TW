@@ -3,6 +3,8 @@ package MySpringMVC.config;
 import javax.sql.DataSource;
 
 import MySpringMVC.dao.*;
+import MySpringMVC.model.Damage;
+import MySpringMVC.model.Earthquake;
 import MySpringMVC.model.Municipality;
 import MySpringMVC.model.Village;
 import org.springframework.context.annotation.Bean;
@@ -57,6 +59,21 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
     @Bean
     public VillageDAO getVillageDAO() {
         return new VillageDAOImpl(getDataSource());
+    }
+
+    @Bean
+    public EarthquakeDAO getEartquakeDAO() {
+        return new EarthquakeDAOImpl(getDataSource());
+    }
+
+    @Bean
+    public DamageDAO getDamageDAO() {
+        return new DamageDAOImpl(getDataSource());
+    }
+
+    @Bean
+    public ClusterDAO getClusterDAO() {
+        return new ClusterDAOImpl(getDataSource());
     }
 
 
