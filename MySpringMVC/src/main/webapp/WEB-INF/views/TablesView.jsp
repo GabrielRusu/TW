@@ -28,7 +28,8 @@
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Modifica tabelele</h1>
+
+                <h2>Modifica tabelele</h2>
 
                 <table>
                     <tr>

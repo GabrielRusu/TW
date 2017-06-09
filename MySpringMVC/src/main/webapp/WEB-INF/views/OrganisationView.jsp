@@ -28,15 +28,15 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
 
-                <h1>Organisation List</h1>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Organisation List</h3>
                 <a href="newOrganisation"><h4>New Organisation</h4></a>
 
                 <table>
@@ -44,7 +44,6 @@
                     <th>Cluster ID</th>
                     <th>Nume</th>
                     <th>Acronim</th>
-
 
                     <% ArrayList<Organisation> posts = (ArrayList<Organisation>) request.getAttribute("listOrganisation");
                         for (Organisation post : posts) { %>

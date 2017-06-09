@@ -27,14 +27,15 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Modifica/Adauga un Project</h1>
+
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Modifica/Adauga un Project</h3>
 
                 <% Project post = (Project) request.getAttribute("Project");
                 %>

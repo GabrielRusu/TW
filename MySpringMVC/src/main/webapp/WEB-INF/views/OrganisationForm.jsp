@@ -27,14 +27,15 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h1>Edit/Add Organisation</h1>
+
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Edit/Add Organisation</h3>
 
                 <% Organisation post = (Organisation) request.getAttribute("Organisation");
                 %>

@@ -8,16 +8,13 @@
 <head>
     <title>INepal</title>
     <link rel="stylesheet" type="text/css" href="../../resources/style.css"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="../../resources/js/sidebar.js"></script>
-    <script src="../../resources/js/charts.js"></script>
 </head>
 <body>
 
 <div id="sidebar">
     <div class="menu">
-        <a href="#intro" style="background: deepskyblue;">INTRODUCERE</a>
+        <a href="#intro">INTRODUCERE</a>
         <a href="#first">DETALII</a>
         <a href="#second">APLICATII</a>
         <a href="#voluntar">FII VOLUNTAR!</a>
@@ -62,7 +59,7 @@
                     graficul. </h2></p>
                 <p>
                 <h2>Fiecare mod de vizualizare are optiunea de exporta datele afisate la momentul
-                    apasarii butonului de exportare. ????????????????</h2></p>
+                    apasarii butonului de exportare. ????</h2></p>
                 <p>
                 <h2>Datele se pot exporta in diferite extensii (.PNG, .SVG) ????</h2></p>
             </ul>
@@ -83,7 +80,7 @@
                                 Cauta anumite cuvinte
                                 Afiseaza informatiile dorite intr-un tabel si filtreaza informatiile dupa nume,
                                 alege doar cateva coloane etc.
-                            ??????????????</h4> </p>
+                            ?????????</h4> </p>
                             <a href="/viewSimpleTable">GO TO</a>
                         </td>
 
@@ -156,7 +153,7 @@
                 <h2>Persoanele care au lucrat la acest proiect sunt: ????? MAYBe rEMOVE</h2></p>
                 <ul>
                     <li><h2>Rusu Gabriel</h2></li>
-                    <li><h2>Perju Sanziana ??????????/</h2></li>
+                    <li><h2>Perju Sanziana </h2></li>
                     <li><h2>Roman Stefan</h2></li>
                 </ul>
             </ul>
