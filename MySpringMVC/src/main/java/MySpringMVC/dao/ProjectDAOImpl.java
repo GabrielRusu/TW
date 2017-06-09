@@ -70,8 +70,16 @@ public class ProjectDAOImpl implements ProjectDAO {
     }
 
     @Override
-    public List<Project> list() {
-        String sql = "SELECT * FROM PROJECTS ";
+    public List<Project> list(Integer pageId,int total) {
+        String sql = "SELECT * FROM "+
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "select * from PROJECTS " +
+                " ) a " +
+                " where rownum < "  +((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1)* total)+1);
+
         List<Project> listProject = jdbcTemplate.query(sql, new RowMapper<Project>() {
 
             @Override

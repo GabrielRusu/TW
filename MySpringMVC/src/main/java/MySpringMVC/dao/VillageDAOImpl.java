@@ -64,8 +64,16 @@ public class VillageDAOImpl implements VillageDAO{
     }
 
     @Override
-    public List<Village> list() {
-        String sql = "SELECT * FROM VILLAGES ORDER BY NAME";
+    public List<Village> list(Integer pageId, int total) {
+        String sql = "SELECT * FROM "+
+           " ( "
+               + "select a.*, rownum r__ FROM" +
+                "( "
+                   + "select * from villages order by name" +
+                " ) a " +
+               " where rownum < "  +((pageId * total) + 1) +
+            ") WHERE r__ >= " + (((pageId - 1)* total)+1);
+
         List<Village> listVillage = jdbcTemplate.query(sql, new RowMapper<Village>() {
 
             @Override

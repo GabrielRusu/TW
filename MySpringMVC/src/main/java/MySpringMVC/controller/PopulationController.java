@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,10 +22,16 @@ public class PopulationController {
     @Autowired
     private PopulationDAO populationDAO;
 
-    @RequestMapping(value = "/viewPopulation")
-    public ModelAndView listPopulation(ModelAndView model) throws IOException {
-        List<Population> listPopulation = populationDAO.list();
+    @RequestMapping(value = "/viewPopulation/{pageId}")
+    public ModelAndView listPopulation(ModelAndView model,@PathVariable Integer pageId) throws IOException {
+        int total = 50;
+        if(pageId == 1){}
+        else {
+            pageId = (pageId - 1) * total + 1;
+        }
+        List<Population> listPopulation = populationDAO.list(pageId, total);
         model.addObject("listPopulation", listPopulation);
+        model.addObject("pageId", pageId);
         model.setViewName("PopulationView");
 
         return model;

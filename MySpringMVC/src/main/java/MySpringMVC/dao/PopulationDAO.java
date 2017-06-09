@@ -12,5 +12,5 @@ public interface PopulationDAO {
 
     public Population get(int mun_id, int dis_id);
 
-    public List<Population> list();
+    public List<Population> list(Integer pageId,int total);
 }

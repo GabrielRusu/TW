@@ -27,20 +27,15 @@
 <div id="main-app">
 
     <div id="view">
-        <a href="/viewCluster">Clusters</a>
-        <a href="/viewDamage">Damages</a>
-        <a href="/viewDistrict">Districts</a>
-        <a href="/viewEarthquake">Earthquakes</a>
-        <a href="/viewMunicipality">Municipalities</a>
-        <a href="/viewVillage">Villages</a>
+        <a href="/viewTables">Intoarce-te la tabele</a>
     </div>
 
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h2>Modifica/Adauga o Populatiet</h2>
+                <h2>Modifica/Adauga o Populatie</h2>
 
-                <h3>Pentru a introduce o noua Populatie, adaugati o combiantie Municipiu ID - Distrcit ID inexistenta</h3>
+                <h3>Pentru a introduce o noua Populatie, adaugati o combinatie Municipiu ID - Distrcit ID inexistenta</h3>
                 <h3>Pentru a modifica o Populatie existenta, modificati orice in afara de ID-uri</h3>
 
                 <% Population post = (Population) request.getAttribute("population");

@@ -13,5 +13,5 @@ public interface ProjectDAO {
 
     public Project get(int id);
 
-    public List<Project> list();
+    public List<Project> list(Integer pageId,int total);
 }

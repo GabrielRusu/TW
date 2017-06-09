@@ -31,12 +31,7 @@
 <div id="main-app">
 
     <div id="view">
-        <a href="/viewCluster">Clusters</a>
-        <a href="/viewDamage">Damages</a>
-        <a href="/viewDistrict">Districts</a>
-        <a href="/viewEarthquake">Earthquakes</a>
-        <a href="/viewMunicipality">Municipalities</a>
-        <a href="/viewVillage">Villages</a>
+        <a href="/viewTables">Intoarce-te la tabele</a>
     </div>
 
     <div align="center">
