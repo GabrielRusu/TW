@@ -15,5 +15,5 @@ public interface VillageDAO {
 
     public Village get(int id);
 
-    public List<Village> list();
+    public List<Village> list(Integer pageId, int total);
 }

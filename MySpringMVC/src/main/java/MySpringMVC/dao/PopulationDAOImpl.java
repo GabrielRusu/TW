@@ -71,8 +71,16 @@ public class PopulationDAOImpl implements PopulationDAO {
     }
 
     @Override
-    public List<Population> list() {
-        String sql = "SELECT * FROM POPULATION ";
+    public List<Population> list(Integer pageId,int total) {
+        String sql = "SELECT * FROM "+
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "select * from POPULATION " +
+                " ) a " +
+                " where rownum < "  +((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1)* total)+1);
+
         List<Population> listPopulation = jdbcTemplate.query(sql, new RowMapper<Population>() {
 
             @Override

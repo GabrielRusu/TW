@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="ojdbc7">
+  <library name="ojdbc71">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../INepal/lib/ojdbc7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/MySpringMVC/WEB-INF/lib/ojdbc7.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

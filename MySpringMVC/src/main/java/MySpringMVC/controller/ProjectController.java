@@ -5,6 +5,7 @@ import MySpringMVC.model.Project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,10 +19,16 @@ public class ProjectController {
     @Autowired
     private ProjectDAO ProjectDAO;
 
-    @RequestMapping(value = "/viewProject")
-    public ModelAndView listProject(ModelAndView model) throws IOException {
-        List<Project> listProject = ProjectDAO.list();
+    @RequestMapping(value = "/viewProject/{pageId}")
+    public ModelAndView listProject(ModelAndView model,@PathVariable Integer pageId) throws IOException {
+        int total = 50;
+        if(pageId == 1){}
+        else {
+            pageId = (pageId - 1) * total + 1;
+        }
+        List<Project> listProject = ProjectDAO.list(pageId, total);
         model.addObject("listProject", listProject);
+        model.addObject("pageId", pageId);
         model.setViewName("ProjectView");
 
         return model;
