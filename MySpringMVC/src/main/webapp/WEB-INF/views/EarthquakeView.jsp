@@ -28,15 +28,15 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
 
-                <h1>Earthquake List</h1>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Earthquake List</h3>
                 <a href="newEarthquake"><h5>Adauga un nou Earthquake</h5></a>
 
                 <table>

@@ -27,17 +27,18 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h2>Modifica/Adauga un District</h2>
 
-                <h3>Pentru a introduce un nou District, adaugati un ID inexistent</h3>
-                <h3>Pentru a modifica un District existent, modificati doar numele</h3>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Modifica/Adauga un District</h3>
+
+                <h4>Pentru a introduce un nou District, adaugati un ID inexistent</h4>
+                <h4>Pentru a modifica un District existent, modificati doar numele</h4>
 
                 <% District post = (District) request.getAttribute("district");
                 %>

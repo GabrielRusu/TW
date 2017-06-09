@@ -27,17 +27,18 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h2>Modifica/Adauga un Earthquake</h2>
 
-                <h3>Pentru a introduce un nou Earthquake, adaugati un ID inexistent si restul datelor</h3>
-                <h3>Pentru a modifica un Earthquake existent, modificati orice in afara de ID</h3>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Modifica/Adauga un Earthquake</h3>
+
+                <h4>Pentru a introduce un nou Earthquake, adaugati un ID inexistent si restul datelor</h4>
+                <h4>Pentru a modifica un Earthquake existent, modificati orice in afara de ID</h4>
 
                 <% Earthquake post = (Earthquake) request.getAttribute("Earthquake");
                 %>

@@ -27,17 +27,18 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h2>Modifica/Adauga o Municipalitate</h2>
 
-                <h3>Pentru a introduce o noua Municipalitate, adaugati un ID inexistent si restul datelor</h3>
-                <h3>Pentru a modifica o Municipalitate existenta, modificati doar numele si District IDul</h3>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Modifica/Adauga o Municipalitate</h3>
+
+                <h4>Pentru a introduce o noua Municipalitate, adaugati un ID inexistent si restul datelor</h4>
+                <h4>Pentru a modifica o Municipalitate existenta, modificati doar numele si District IDul</h4>
 
 
                 <% Municipality post = (Municipality) request.getAttribute("Municipality");

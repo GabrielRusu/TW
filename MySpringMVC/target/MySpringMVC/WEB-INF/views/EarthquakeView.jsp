@@ -12,10 +12,7 @@
 <head>
     <title>INepal</title>
     <link rel="stylesheet" type="text/css" href="../../resources/crud.css"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="../../resources/js/sidebar.js"></script>
-    <script src="../../resources/js/charts.js"></script>
 </head>
 <body>
 
@@ -31,20 +28,15 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewCluster">Clusters</a>
-        <a href="/viewDamage">Damages</a>
-        <a href="/viewDistrict">Districts</a>
-        <a href="/viewEarthquake">Earthquakes</a>
-        <a href="/viewMunicipality">Municipalities</a>
-        <a href="/viewVillage">Villages</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
 
-                <h1>Earthquake List</h1>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Earthquake List</h3>
                 <a href="newEarthquake"><h5>Adauga un nou Earthquake</h5></a>
 
                 <table>
@@ -53,8 +45,6 @@
                     <th>Municipiu ID</th>
                     <th>Data</th>
                     <th>Gravitate</th>
-                    <th>Modifica</th>
-                    <th>Sterge</th>
 
                     <% ArrayList<Earthquake> posts = (ArrayList<Earthquake>) request.getAttribute("listEarthquake");
                         for (Earthquake post : posts) { %>

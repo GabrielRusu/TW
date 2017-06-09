@@ -28,27 +28,20 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewCluster">Clusters</a>
-        <a href="/viewDamage">Damages</a>
-        <a href="/viewDistrict">Districts</a>
-        <a href="/viewEarthquake">Earthquakes</a>
-        <a href="/viewMunicipality">Municipalities</a>
-        <a href="/viewVillage">Villages</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
 
-                <h1>District List</h1>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>District List</h3>
                 <a href="newDistrict"><h5>Adauga un nou District</h5></a>
 
                 <table>
                     <th>ID</th>
                     <th>Nume</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
 
                     <% ArrayList<District> posts = (ArrayList<District>) request.getAttribute("listDistrict");
                         for (District post : posts) { %>

@@ -28,15 +28,15 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
 
-                <h1>Cluster List</h1>
+                <div id="view" align="center">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Cluster List</h3>
                 <a href="newCluster"><h5>Adauga un nou Cluster</h5></a>
 
                 <table>

@@ -27,17 +27,18 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h2>Modifica/Adauga un Damage</h2>
 
-                <h3>Pentru a introduce un nou Damage, adaugati un ID inexistent si restul datelor</h3>
-                <h3>Pentru a modifica un Damage existent, modificati doar campurile in afara de District ID</h3>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Modifica/Adauga un Damage</h3>
+
+                <h4>Pentru a introduce un nou Damage, adaugati un ID inexistent si restul datelor</h4>
+                <h4>Pentru a modifica un Damage existent, modificati doar campurile in afara de District ID</h4>
 
                 <% Damage post = (Damage) request.getAttribute("Damage");
                 %>
