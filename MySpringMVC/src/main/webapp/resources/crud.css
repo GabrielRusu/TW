@@ -101,11 +101,12 @@ div#chart-div {
     height: 25px;
     margin-top: 7px;
     margin-bottom: 13px;
+    padding-left: 7px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align: center;
     padding-top: 10px;
-    width: auto;
+    display: inline-block;
     z-index: 1;
     transition: 0.5s;
 }
@@ -194,11 +195,6 @@ table th {
     padding: 3px 5px 3px 5px;
     font: 18px arial, sans-serif;
     color: #f7f7f7;
-}
-
-
-td:nth-child(even) {
-    background-color: #600000;
 }
 
 input {

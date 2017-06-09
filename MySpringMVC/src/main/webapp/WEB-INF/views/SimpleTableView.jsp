@@ -40,8 +40,7 @@
                     coloanele separat pentru afisare</h4>
                 <div id="view">
                     <a href="/viewSimpleTable">Statistici populatie</a>
-                    <a href="/viewSimpleTable2">Statistici populatie</a>
-                    <a href="/viewSimpleTable3">Statistici populatie</a>
+                    <a href="/viewSimpleTable2">Informatii proiecte</a>
                 </div>
 
                 <table>

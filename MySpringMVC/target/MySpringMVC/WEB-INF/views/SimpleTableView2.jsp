@@ -1,5 +1,6 @@
 <%@ page import="MySpringMVC.model.PopStatistics" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="MySpringMVC.model.ProjectActivity" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <meta charset="UTF-8">
@@ -40,26 +41,34 @@
                     coloanele separat pentru afisare</h4>
                 <div id="view">
                     <a href="/viewSimpleTable">Statistici populatie</a>
-                    <a href="/viewSimpleTable2">Statistici populatie</a>
-                    <a href="/viewSimpleTable3">Statistici populatie</a>
+                    <a href="/viewSimpleTable2">Informatii proiecte</a>
                 </div>
 
                 <table>
-                    <th>Nume District</th>
-                    <th>Populatie</th>
-                    <th>Morti</th>
-                    <th>Raniti</th>
+                    <th>Cluster</th>
+                    <th>District</th>
+                    <th>Municipalitate</th>
+                    <th>Activitate</th>
+                    <th>Tip Lucru</th>
+                    <th>Nr. Total</th>
+                    <th>Unitate de masura</th>
 
-                    <% ArrayList<PopStatistics> posts = (ArrayList<PopStatistics>) request.getAttribute("listSimpleTable");
-                        for (PopStatistics post : posts) { %>
+                    <% ArrayList<ProjectActivity> posts = (ArrayList<ProjectActivity>) request.getAttribute("listSimpleTable2");
+                        for (ProjectActivity post : posts) { %>
                     <tr>
-                        <td><%=post.getName()%>
+                        <td><%=post.getCluster()%>
                         </td>
-                        <td><%=post.getPopulation()%>
+                        <td><%=post.getDistrict()%>
                         </td>
-                        <td><%=post.getDead()%>
+                        <td><%=post.getMunicipality()%>
                         </td>
-                        <td><%=post.getInjured()%>
+                        <td><%=post.getActivity()%>
+                        </td>
+                        <td><%=post.getItem()%>
+                        </td>
+                        <td><%=post.getTotal()%>
+                        </td>
+                        <td><%=post.getUnit()%>
                         </td>
                     </tr>
                     <%}%>
