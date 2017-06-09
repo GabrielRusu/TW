@@ -30,22 +30,18 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewCluster">Clusters</a>
-        <a href="/viewDamage">Damages</a>
-        <a href="/viewDistrict">Districts</a>
-        <a href="/viewEarthquake">Earthquakes</a>
-        <a href="/viewMunicipality">Municipalities</a>
-        <a href="/viewVillage">Villages</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h2>Modifica/Adauga un Cluster</h2>
 
-                <h3>Pentru a introduce un nou Cluster, adaugati un ID inexistent</h3>
-                <h3>Pentru a modifica un Cluster existent, modificati doar numele</h3>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Modifica/Adauga un Cluster</h3>
+
+                <h4>Pentru a introduce un nou Cluster, adaugati un ID inexistent</h4>
+                <h4>Pentru a modifica un Cluster existent, modificati doar numele</h4>
 
                 <% Cluster post = (Cluster) request.getAttribute("Cluster");
                 %>

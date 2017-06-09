@@ -1,3 +1,5 @@
+<%@ page import="MySpringMVC.model.PopStatistics" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <meta charset="UTF-8">
@@ -5,7 +7,7 @@
 <html>
 <head>
     <title>INepal</title>
-    <link rel="stylesheet" type="text/css" href="../../resources/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../resources/crud.css"/>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
@@ -22,38 +24,58 @@
 </div>
 
 <div id="main-app">
+    <div align="center">
+        <section id="intro">
+            <div class="article-intro">
 
-    <div id="view">
-        <a href="/viewSimpleTable">Tabel</a>
-        <a href="/viewGraph">Grafic</a>
-        <a href="/viewChart">Chart</a>
-        <a href="/viewMap?hazard=-1">Harta</a>
+                <div id="view">
+                    <a href="/viewSimpleTable">Tabel</a>
+                    <a href="/viewGraph">Grafic</a>
+                    <a href="/viewChart">Chart</a>
+                    <a href="/viewMap?hazard=-1">Harta</a>
+                </div>
+
+                <h3>Table</h3>
+                <h4>Aici puteti alege din ce categorie doriti sa afisati si puteti filtra informatiile sau alege
+                    coloanele separat pentru afisare</h4>
+                <div id="view">
+                    <a href="/viewSimpleTable">Statistici populatie</a>
+                    <a href="/viewSimpleTable2">Statistici populatie</a>
+                    <a href="/viewSimpleTable3">Statistici populatie</a>
+                </div>
+
+                <table>
+                    <th>Nume District</th>
+                    <th>Populatie</th>
+                    <th>Morti</th>
+                    <th>Raniti</th>
+
+                    <% ArrayList<PopStatistics> posts = (ArrayList<PopStatistics>) request.getAttribute("listSimpleTable");
+                        for (PopStatistics post : posts) { %>
+                    <tr>
+                        <td><%=post.getName()%>
+                        </td>
+                        <td><%=post.getPopulation()%>
+                        </td>
+                        <td><%=post.getDead()%>
+                        </td>
+                        <td><%=post.getInjured()%>
+                        </td>
+                    </tr>
+                    <%}%>
+                </table>
+
+                <p><h4>Puteti exporta chart-ul in format .png, .jpg sau in format .csv</h4></p>
+
+                <div id="view">
+                    <a href="">PNG</a>
+                    <a href="">JPG</a>
+                    <a href="">CSV</a>
+                </div>
+
+            </div>
+        </section>
     </div>
-
-    <section id="intro">
-        <div class="article-intro">
-
-            <div class="container">
-                <center><img src="../../resources/images/example.png" alt="Table example" width="75%"></center>
-            </div>
-
-            <h3>Table</h3>
-            <p>
-            <h2>Sunteti la modul de vizualizare tabel</h2></p>
-            <p>
-            <h2>Aici puteti alege din ce categorie doriti sa afisati si puteti filtra informatiile sau alege coloanele
-                separat pentru afisare</h2></p>
-            <p>
-            <h2>Puteti exporta chart-ul in format .png, .jpg sau in format .csv</h2></p>
-
-            <div id="view">
-                <a href="">PNG</a>
-                <a href="">JPG</a>
-                <a href="">CSV</a>
-            </div>
-
-        </div>
-    </section>
 
 </div>
 

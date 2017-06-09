@@ -1,8 +1,5 @@
 package MySpringMVC.model;
 
-/**
- * Created by Stefan on 6/7/2017.
- */
 public class Village {
 
     private int id;

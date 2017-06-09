@@ -28,15 +28,15 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewTables">Intoarce-te la tabele</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
 
-                <h1>Damage List</h1>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Damage List</h3>
                 <a href="newDamage"><h5>Adauga un nou Damage</h5></a>
 
                 <table>

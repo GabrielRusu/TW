@@ -13,6 +13,7 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 
@@ -22,6 +23,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.scheduling.annotation.Scheduled;
 
 import MySpringMVC.model.District;
 import MySpringMVC.model.Municipality;
@@ -109,5 +111,8 @@ public class TablesDAOImpl {
 
     }
 
-
+    @Scheduled(cron = "*/5 * * * * ?")
+    void checkUpdate() {
+        System.out.println("Method executed at every 5 seconds. Current time is :: "+ new Date());
+    }
 }

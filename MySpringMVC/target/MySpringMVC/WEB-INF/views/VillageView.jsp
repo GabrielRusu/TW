@@ -12,10 +12,7 @@
 <head>
     <title>INepal</title>
     <link rel="stylesheet" type="text/css" href="../../resources/crud.css"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="../../resources/js/sidebar.js"></script>
-    <script src="../../resources/js/charts.js"></script>
 </head>
 <body>
 
@@ -31,29 +28,22 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewCluster">Clusters</a>
-        <a href="/viewDamage">Damages</a>
-        <a href="/viewDistrict">Districts</a>
-        <a href="/viewEarthquake">Earthquakes</a>
-        <a href="/viewMunicipality">Municipalities</a>
-        <a href="/viewVillage">Villages</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
 
-                <h1>Village List</h1>
-                <a href="newVillage"><h5>Adauga un nou Village</h5></a>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Village List</h3>
+                <a href="newVillage"><h4>Adauga un nou Village</h4></a>
 
                 <table>
                     <th>ID</th>
                     <th>Municipiu ID</th>
                     <th>District ID</th>
                     <th>Nume</th>
-                    <th>Modifica</th>
-                    <th>Sterge</th>
 
                     <% ArrayList<Village> posts = (ArrayList<Village>) request.getAttribute("listVillage");
                         for (Village post : posts) { %>

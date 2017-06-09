@@ -30,22 +30,18 @@
 
 <div id="main-app">
 
-    <div id="view">
-        <a href="/viewCluster">Clusters</a>
-        <a href="/viewDamage">Damages</a>
-        <a href="/viewDistrict">Districts</a>
-        <a href="/viewEarthquake">Earthquakes</a>
-        <a href="/viewMunicipality">Municipalities</a>
-        <a href="/viewVillage">Villages</a>
-    </div>
-
     <div align="center">
         <section id="intro">
             <div class="article-intro">
-                <h2>Modifica/Adauga un Village</h2>
 
-                <h3>Pentru a introduce un nou Village, adaugati un ID inexistent si restul datelor</h3>
-                <h3>Pentru a modifica un Village existent, puteti modifica tot in afara de ID</h3>
+                <div id="view">
+                    <a href="/viewTables">Intoarce-te la tabele</a>
+                </div>
+
+                <h3>Modifica/Adauga un Village</h3>
+
+                <h4>Pentru a introduce un nou Village, adaugati un ID inexistent si restul datelor</h4>
+                <h4>Pentru a modifica un Village existent, puteti modifica tot in afara de ID</h4>
 
                 <% Village post = (Village) request.getAttribute("Village");
                 %>
