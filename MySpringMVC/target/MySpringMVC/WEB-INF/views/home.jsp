@@ -80,7 +80,7 @@
                                 Cauta anumite cuvinte
                                 Afiseaza informatiile dorite intr-un tabel si filtreaza informatiile dupa nume,
                                 alege doar cateva coloane etc.
-                            ?????????</h4> </p>
+                                ?????????</h4> </p>
                             <a href="/viewSimpleTable">GO TO</a>
                         </td>
 
@@ -95,7 +95,8 @@
                             <a href="/viewChart">GO TO</a>
                         </td>
                         <td><h3> Harta </h3>
-                            <p> <h4> Alege ce tip de informatii sa se afiseze pe harta si categoria acestui tip ???? </h4> </p>
+                            <p> <h4> Alege ce tip de informatii sa se afiseze pe harta si categoria acestui tip
+                                ???? </h4> </p>
                             <a href="/viewMap?hazard=-1">GO TO</a>
                         </td>
                     </tr>

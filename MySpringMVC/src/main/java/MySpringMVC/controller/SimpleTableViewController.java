@@ -6,12 +6,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import MySpringMVC.dao.SimpleTableViewDAOImpl;
-import MySpringMVC.model.District;
 import MySpringMVC.model.PopStatistics;
+import MySpringMVC.model.ProjectActivity;
 
 @Controller
 public class SimpleTableViewController {
@@ -30,8 +29,8 @@ public class SimpleTableViewController {
 
     @RequestMapping(value = "/viewSimpleTable2")
     public ModelAndView listSimpleTable2(ModelAndView model) throws IOException {
-        List<PopStatistics> simpleTableList = simpleTableViewDAO.list();
-        model.addObject("listSimpleTable", simpleTableList);
+        List<ProjectActivity> simpleTableList = simpleTableViewDAO.list2();
+        model.addObject("listSimpleTable2", simpleTableList);
         model.setViewName("SimpleTableView2");
 
         return model;
