@@ -36,11 +36,10 @@
                 </div>
 
                 <h3>Table</h3>
-                <h4>Aici puteti alege din ce categorie doriti sa afisati si puteti filtra informatiile sau alege
-                    coloanele separat pentru afisare</h4>
+                <h4>Informatii despre populatie</h4>
                 <div id="view">
-                    <a href="/viewSimpleTable">Statistici populatie</a>
-                    <a href="/viewSimpleTable2">Informatii proiecte</a>
+                    <a href="/viewSimpleTable/1">Statistici populatie</a>
+                    <a href="/viewSimpleTable2/1">Informatii proiecte</a>
                 </div>
 
                 <table>
@@ -74,11 +73,11 @@
 
                 <div id="view" style="background: transparent;">
                     <% Integer pageId = (Integer) request.getAttribute("pageId"); %>
-                    <a href="/viewVillage/<%=pageId-10%>"> << </a>
-                    <a href="/viewVillage/<%=pageId-1%>"> < </a>
-                    <a href="/viewVillage/<%=pageId%>"> <%=pageId%> </a>
-                    <a href="/viewVillage/<%=pageId+1%>"> > </a>
-                    <a href="/viewVillage/<%=pageId+10%>"> >> </a>
+                    <a href="/viewSimpleTable/<%=pageId-10%>"> << </a>
+                    <a href="/viewSimpleTable/<%=pageId-1%>"> < </a>
+                    <a href="/viewSimpleTable/<%=pageId%>"> <%=pageId%> </a>
+                    <a href="/viewSimpleTable/<%=pageId+1%>"> > </a>
+                    <a href="/viewSimpleTable/<%=pageId+10%>"> >> </a>
                 </div>
 
             </div>

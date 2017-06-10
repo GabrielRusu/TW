@@ -11,14 +11,23 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
 import java.util.List;
 
 
 import javax.sql.DataSource;
 
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartUtilities;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.general.DefaultPieDataset;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
@@ -155,4 +164,139 @@ public class TablesDAOImpl {
         }
 
     }
+
+    public void createChart() {
+
+        /* Database connection */
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        Connection connect = null;
+        try {
+            connect = DriverManager.getConnection(
+                    "jdbc:oracle:thin:@localhost:1521:XE",
+                    "ION",
+                    "ION");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        Statement statement = null;
+        try {
+            statement = connect.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        String sql = "SELECT * FROM (SELECT d.name AS namee, sum(da.male_death)+sum(da.fem_death)+sum(da.fem_injured)+sum(da.male_injured) AS yes" +
+                " FROM damages da JOIN districts d ON (d.dis_id = da.dis_id) GROUP BY d.name ORDER BY yes DESC) WHERE rownum < 11 ";
+        ResultSet resultSet = null;
+        try {
+            resultSet = statement.executeQuery(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        DefaultPieDataset dataset = new DefaultPieDataset();
+
+        try {
+            while (resultSet.next()) {
+                dataset.setValue(
+                        resultSet.getString("namee"),
+                        Double.parseDouble(resultSet.getString("yes")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        JFreeChart chart = ChartFactory.createPieChart(
+                "",   // chart title
+                dataset,          // data
+                true,             // include legend
+                true,
+                false);
+
+
+        File f = new File(TablesDAOImpl.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+        String path;
+
+        for (int i = 0; i < 4; i++) {
+            f = f.getParentFile();
+        }
+        path = f.getAbsolutePath() + "\\src\\main\\webapp\\resources\\images\\";
+
+        try {
+            path = URLDecoder.decode(path, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        int width = 1280;    /* Width of the image */
+        int height = 720;   /* Height of the image */
+        File pieChart = new File(path + "Pie_Chart.jpeg");
+        try {
+            ChartUtilities.saveChartAsJPEG(pieChart, chart, width, height);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void createChart2() {
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "ION", "ION");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        Statement stmt = null;
+        try {
+            stmt = conn.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            ResultSet query_set = stmt.executeQuery("SELECT * FROM (SELECT d.gov_damaged,d.public_damaged, di.name AS name FROM damages d " +
+                    "JOIN districts di ON (di.dis_id = d.dis_id) " +
+                    "ORDER BY (d.gov_damaged + d.public_damaged) DESC) WHERE rownum < 10");
+            while (query_set.next()) {
+                int gov_damaged = query_set.getInt("gov_damaged");
+                int public_damaged = query_set.getInt("public_damaged");
+                String dis_id = query_set.getString("name");
+                int damages = gov_damaged + public_damaged;
+                dataset.addValue(damages, dis_id, dis_id);
+            }
+            JFreeChart BarChartObject = ChartFactory.createBarChart("Top 10 districts with the most damages", "Districts", "Damages", dataset, PlotOrientation.VERTICAL, true, true, false);
+            query_set.close();
+            stmt.close();
+            conn.close();
+
+            File f = new File(TablesDAOImpl.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+            String path;
+
+            for (int i = 0; i < 4; i++) {
+                f = f.getParentFile();
+            }
+            path = f.getAbsolutePath() + "\\src\\main\\webapp\\resources\\images\\";
+
+            try {
+                path = URLDecoder.decode(path, "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+
+            int width = 1280; /* Width of the image */
+            int height = 720; /* Height of the image */
+            File BarChart = new File(path + "output_chart.png");
+            ChartUtilities.saveChartAsPNG(BarChart, BarChartObject, width, height);
+        } catch (Exception i) {
+            System.out.println(i);
+        }
+    }
+
 }

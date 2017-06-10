@@ -30,6 +30,8 @@
             <div class="article-intro">
 
                 <h2>Modifica tabelele</h2>
+                <div id="view" style="background: transparent;"><a href="/updateChart">UPDATE CHART</a></div>
+                <div id="view" style="background: transparent;"><a href="/updateChart2">UPDATE GRAPH</a></div>
 
                 <table>
                     <tr>
@@ -37,7 +39,7 @@
                             <p> <h4> Datele despre fiecare municipiu in parte sunt in acest tabel,
                             cu date despre populatie: numar de oameni, gospodarii si densitatea populatiei</h4> </p>
                             <div id="view" style="background: transparent;">
-                                <a href="/viewPopulation">GO TO</a>
+                                <a href="/viewPopulation/1">GO TO</a>
                                 <a href="/updateTables">UPDATE</a>
                             </div>
                         </td>
@@ -46,7 +48,7 @@
                             <p> <h4> Acest tabel contine grupurile de organizatii guvernamentale si
                                 non-guvernamentale care au ajutat dupa dezastrul din Nepal</h4> </p>
                             <div id="view" style="background: transparent;">
-                                <a href="/viewCluster">GO TO</a>
+                                <a href="/viewCluster/1">GO TO</a>
                             </div>
                         </td>
 
@@ -54,7 +56,7 @@
                             <p> <h4> Aici sunt datele cu numarul de victime si cladiri daunate dupa,
                                 fiecare impartite pe districte </h4> </p>
                             <div id="view" style="background: transparent;">
-                                <a href="/viewDamage">GO TO</a>
+                                <a href="/viewDamage/1">GO TO</a>
                             </div>
                         </td>
                     </tr>
@@ -62,19 +64,19 @@
                         <td><h3> Districts </h3>
                             <p> <h4> Tabela cu toate districtele cu numele si ID-urile </h4> </p>
                             <div id="view" style="background: transparent;">
-                                <a href="/viewDistrict">GO TO</a>
+                                <a href="/viewDistrict/1">GO TO</a>
                             </div>
                         </td>
                         <td><h3> Earthquakes </h3>
                             <p> <h4> Toate zonele afectate de cutremure, cu data, ora si gravitatea acestuia </h4> </p>
                             <div id="view" style="background: transparent;">
-                                <a href="/viewEarthquake">GO TO</a>
+                                <a href="/viewEarthquake/1">GO TO</a>
                             </div>
                         </td>
                         <td><h3> Municipalities </h3>
                             <p> <h4> Aici sunt toate municipalitatile (parte a unui district)</h4> </p>
                             <div id="view" style="background: transparent;">
-                                <a href="/viewMunicipality">GO TO</a>
+                                <a href="/viewMunicipality/1">GO TO</a>
                             </div>
                         </td>
                     </tr>
@@ -83,20 +85,20 @@
                             <p> <h4> Toate organizatiile guvernamentale si non-guvernamentale sunt aici, fiecare
                                 cu acronimul sau si ID-ul Clusterului din care face parte</h4> </p>
                             <div id="view" style="background: transparent;">
-                                <a href="/viewOrganisation">GO TO</a>
+                                <a href="/viewOrganisation/1">GO TO</a>
                             </div>
                         </td>
                         <td><h3> Projects </h3>
                             <p> <h4> Toate proiectele care au avut loc/au loc si zonele, plus cate persoane au ajutat
                                 si cu ce</h4> </p>
                             <div id="view" style="background: transparent;">
-                                <a href="/viewProject">GO TO</a>
+                                <a href="/viewProject/1">GO TO</a>
                             </div>
                         </td>
                         <td><h3> Villages </h3>
                             <p> <h4> O asezare este o parte a unui municipiu, mai multe asezari formand un municipiu</h4> </p>
                             <div id="view" style="background: transparent;">
-                                <a href="/viewVillage">GO TO</a>
+                                <a href="/viewVillage/1">GO TO</a>
                             </div>
                         </td>
                     </tr>

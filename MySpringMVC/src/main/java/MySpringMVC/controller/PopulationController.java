@@ -25,13 +25,15 @@ public class PopulationController {
     @RequestMapping(value = "/viewPopulation/{pageId}")
     public ModelAndView listPopulation(ModelAndView model,@PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){}
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
         else {
             pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<Population> listPopulation = populationDAO.list(pageId, total);
         model.addObject("listPopulation", listPopulation);
-        model.addObject("pageId", pageId);
         model.setViewName("PopulationView");
 
         return model;
@@ -48,7 +50,7 @@ public class PopulationController {
     @RequestMapping(value = "/savePopulation", method = RequestMethod.POST)
     public ModelAndView savePopulation(@ModelAttribute Population population) {
         populationDAO.saveOrUpdate(population);
-        return new ModelAndView("redirect:/viewPopulation");
+        return new ModelAndView("redirect:/viewPopulation/1");
     }
 
     @RequestMapping(value = "/deletePopulation", method = RequestMethod.GET)
@@ -56,7 +58,7 @@ public class PopulationController {
         int mun_id = Integer.parseInt(request.getParameter("mun_id"));
         int dis_id = Integer.parseInt(request.getParameter("dis_id"));
         populationDAO.delete(mun_id, dis_id);
-        return new ModelAndView("redirect:/viewPopulation");
+        return new ModelAndView("redirect:/viewPopulation/1");
     }
 
     @RequestMapping(value = "/editPopulation", method = RequestMethod.GET)

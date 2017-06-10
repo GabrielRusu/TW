@@ -27,22 +27,20 @@
             <div class="article-intro">
 
                 <div id="view">
-                    <a href="/viewSimpleTable">Tabel</a>
+                    <a href="/viewSimpleTable/1">Tabel</a>
                     <a href="/viewGraph">Grafic</a>
                     <a href="/viewChart">Chart</a>
                     <a href="/viewMap?hazard=-1">Harta</a>
                 </div>
 
-                <div class="container">
-                    <center><img src="../../resources/images/graph.png" alt="Graph example"></center>
-                </div>
-
                 <h3>Graph</h3>
                 <p>
                 <h2>Sunteti la modul de vizualizare grafic</h2></p>
-                <p>
-                <h2>Aici puteti alege informatiile pe care doriti sa le afisati din cateva functii predefinite</h2></p>
-                <p>
+
+                <div class="container">
+                    <center><img src="../../resources/images/output_chart.png" alt="Graph example"></center>
+                </div>
+
                 <h2>Puteti exporta chart-ul in format .png sau .jpg</h2></p>
 
                 <div id="view">

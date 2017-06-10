@@ -29,7 +29,6 @@
             <ul>
                 <h1>INTRODUCERE</h1>
 
-                <a href="/viewTables">VIEW TABLES</a>
                 <p>
                 <h2>Proiectul NEDa</h2></p>
                 <p>
@@ -39,7 +38,7 @@
                     va dovedi ca impactul cutremurului a fost mai mare din punct de vedere al
                     pierderilor de vieti omenesti.</h2></p>
                 <p>
-                <h2>Administratorul poate updata aceste date in timp real ,pentru a redistribui ajutoarele spre noi
+                <h2>Administratorul poate updata aceste date in timp real, pentru a redistribui ajutoarele spre noi
                     districte nevoiase.</h2></p>
             </ul>
 
@@ -58,10 +57,7 @@
                 <h2>Exista mai multe moduri de vizualizare, printre care numaram harta, chart-ul, tabelul si
                     graficul. </h2></p>
                 <p>
-                <h2>Fiecare mod de vizualizare are optiunea de exporta datele afisate la momentul
-                    apasarii butonului de exportare. ????</h2></p>
-                <p>
-                <h2>Datele se pot exporta in diferite extensii (.PNG, .SVG) ????</h2></p>
+
             </ul>
 
         </div>
@@ -77,26 +73,22 @@
                     <tr>
                         <td><h3> Tabel </h3>
                             <p> <h4> Alege din mai multe tipuri de informatii care sa fie afisate intr-un tabel.
-                                Cauta anumite cuvinte
-                                Afiseaza informatiile dorite intr-un tabel si filtreaza informatiile dupa nume,
-                                alege doar cateva coloane etc.
-                                ?????????</h4> </p>
-                            <a href="/viewSimpleTable">GO TO</a>
+                                </h4> </p>
+                            <a href="/viewSimpleTable/1">GO TO</a>
                         </td>
 
                         <td><h3> Grafic </h3>
-                            <p> <h4> Alege ce date sa fie afisate intr-un grafic. </h4> </p>
+                            <p> <h4> Aici sunt date afisate intr-un grafic </h4> </p>
                             <a href="/viewGraph">GO TO</a>
                         </td>
                     </tr>
                     <tr>
                         <td><h3> Chart </h3>
-                            <p> <h4> Statistici in charttaw awd ?W ?????? </h4> </p>
+                            <p> <h4> Statistici in modul de vizualizare Pie Chart </h4> </p>
                             <a href="/viewChart">GO TO</a>
                         </td>
                         <td><h3> Harta </h3>
-                            <p> <h4> Alege ce tip de informatii sa se afiseze pe harta si categoria acestui tip
-                                ???? </h4> </p>
+                            <p> <h4> O harta care arata locatii depinzand de alegere </h4> </p>
                             <a href="/viewMap?hazard=-1">GO TO</a>
                         </td>
                     </tr>
@@ -151,12 +143,14 @@
                 <p>
                 <h1>FINAL</h1></p>
                 <p>
-                <h2>Persoanele care au lucrat la acest proiect sunt: ????? MAYBe rEMOVE</h2></p>
+                <h2>Persoanele care au lucrat la acest proiect sunt:</h2></p>
                 <ul>
                     <li><h2>Rusu Gabriel</h2></li>
-                    <li><h2>Perju Sanziana </h2></li>
                     <li><h2>Roman Stefan</h2></li>
+                    <li><h2>Perju Sanziana </h2></li>
                 </ul>
+
+                <a href="/viewTables"><h5>VIEW TABLES</h5></a>
             </ul>
         </div>
     </section>

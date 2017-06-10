@@ -22,14 +22,15 @@ public class OrganisationController {
     @RequestMapping(value = "/viewOrganisation/{pageId}")
     public ModelAndView listOrganisation(ModelAndView model,@PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){}
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
         else {
             pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<Organisation> listOrganisation = OrganisationDAO.list(pageId, total);
-        model.addObject("pageId", pageId);
         model.addObject("listOrganisation", listOrganisation);
-        model.addObject("pageId", pageId);
         model.setViewName("OrganisationView");
 
         return model;
@@ -46,14 +47,14 @@ public class OrganisationController {
     @RequestMapping(value = "/saveOrganisation", method = RequestMethod.POST)
     public ModelAndView saveOrganisation(@ModelAttribute Organisation Organisation) {
         OrganisationDAO.saveOrUpdate(Organisation);
-        return new ModelAndView("redirect:/viewOrganisation");
+        return new ModelAndView("redirect:/viewOrganisation/1");
     }
 
     @RequestMapping(value = "/deleteOrganisation", method = RequestMethod.GET)
     public ModelAndView deleteOrganisation(HttpServletRequest request) {
         int org_id = Integer.parseInt(request.getParameter("id"));
         OrganisationDAO.delete(org_id);
-        return new ModelAndView("redirect:/viewOrganisation");
+        return new ModelAndView("redirect:/viewOrganisation/1");
     }
 
     @RequestMapping(value = "/editOrganisation", method = RequestMethod.GET)

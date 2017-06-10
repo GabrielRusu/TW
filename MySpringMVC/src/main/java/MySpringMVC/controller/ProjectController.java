@@ -22,13 +22,15 @@ public class ProjectController {
     @RequestMapping(value = "/viewProject/{pageId}")
     public ModelAndView listProject(ModelAndView model,@PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){}
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
         else {
             pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<Project> listProject = ProjectDAO.list(pageId, total);
         model.addObject("listProject", listProject);
-        model.addObject("pageId", pageId);
         model.setViewName("ProjectView");
 
         return model;
@@ -45,14 +47,14 @@ public class ProjectController {
     @RequestMapping(value = "/saveProject", method = RequestMethod.POST)
     public ModelAndView saveProject(@ModelAttribute Project Project) {
         ProjectDAO.saveOrUpdate(Project);
-        return new ModelAndView("redirect:/viewProject");
+        return new ModelAndView("redirect:/viewProject/1");
     }
 
     @RequestMapping(value = "/deleteProject", method = RequestMethod.GET)
     public ModelAndView deleteProject(HttpServletRequest request) {
         int clus_id = Integer.parseInt(request.getParameter("clus_id"));
         ProjectDAO.delete(clus_id);
-        return new ModelAndView("redirect:/viewProject");
+        return new ModelAndView("redirect:/viewProject/1");
     }
 
     @RequestMapping(value = "/editProject", method = RequestMethod.GET)

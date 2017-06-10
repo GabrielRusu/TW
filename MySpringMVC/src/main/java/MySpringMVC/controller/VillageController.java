@@ -26,14 +26,15 @@ public class VillageController {
     @RequestMapping(value = "/viewVillage/{pageId}")
     public ModelAndView listVillage(ModelAndView model,@PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){model.addObject("pageId",pageId);}
-            else{
-            pageId = (pageId - 1)* total +1;
-            model.addObject("pageId",pageId/total);
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
+        else {
+            pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<Village> listVillage = villageDAO.list(pageId, total);
         model.addObject("listVillage", listVillage);
-        model.addObject("pageId", pageId);
         model.setViewName("VillageView");
 
         return model;
@@ -50,14 +51,14 @@ public class VillageController {
     @RequestMapping(value = "/saveVillage", method = RequestMethod.POST)
     public ModelAndView saveVillage(@ModelAttribute Village Village) {
         villageDAO.saveOrUpdate(Village);
-        return new ModelAndView("redirect:/viewVillage");
+        return new ModelAndView("redirect:/viewVillage/1");
     }
 
     @RequestMapping(value = "/deleteVillage", method = RequestMethod.GET)
     public ModelAndView deleteVillage(HttpServletRequest request) {
         int vil_id = Integer.parseInt(request.getParameter("id"));
         villageDAO.delete(vil_id);
-        return new ModelAndView("redirect:/viewVillage");
+        return new ModelAndView("redirect:/viewVillage/1");
     }
 
     @RequestMapping(value = "/editVillage", method = RequestMethod.GET)

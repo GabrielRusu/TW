@@ -25,13 +25,15 @@ public class DistrictController {
     @RequestMapping(value = "/viewDistrict/{pageId}")
     public ModelAndView listDistrict(ModelAndView model,@PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){}
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
         else {
             pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<District> listDistrict = districtDAO.list(pageId, total);
         model.addObject("listDistrict", listDistrict);
-        model.addObject("pageId", pageId);
         model.setViewName("DistrictView");
 
         return model;
@@ -48,14 +50,14 @@ public class DistrictController {
     @RequestMapping(value = "/saveDistrict", method = RequestMethod.POST)
     public ModelAndView saveDistrict(@ModelAttribute District district) {
         districtDAO.saveOrUpdate(district);
-        return new ModelAndView("redirect:/viewDistrict");
+        return new ModelAndView("redirect:/viewDistrict/1");
     }
 
     @RequestMapping(value = "/deleteDistrict", method = RequestMethod.GET)
     public ModelAndView deleteDistrict(HttpServletRequest request) {
         int dis_id = Integer.parseInt(request.getParameter("id"));
         districtDAO.delete(dis_id);
-        return new ModelAndView("redirect:/viewDistrict");
+        return new ModelAndView("redirect:/viewDistrict/1");
     }
 
     @RequestMapping(value = "/editDistrict", method = RequestMethod.GET)

@@ -22,13 +22,15 @@ public class SimpleTableViewController {
     @RequestMapping(value = "/viewSimpleTable/{pageId}")
     public ModelAndView listSimpleTable(ModelAndView model, @PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){}
-        else{
-            pageId = (pageId - 1)* total +1;
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
+        else {
+            pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<PopStatistics> simpleTableList = simpleTableViewDAO.list(pageId, total);
         model.addObject("listSimpleTable", simpleTableList);
-        model.addObject("pageId", pageId);
         model.setViewName("SimpleTableView");
 
         return model;
@@ -37,13 +39,15 @@ public class SimpleTableViewController {
     @RequestMapping(value = "/viewSimpleTable2/{pageId}")
     public ModelAndView listSimpleTable2(ModelAndView model, @PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){}
-        else{
-            pageId = (pageId - 1)* total +1;
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
+        else {
+            pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<ProjectActivity> simpleTableList = simpleTableViewDAO.list2(pageId, total);
         model.addObject("listSimpleTable2", simpleTableList);
-        model.addObject("pageId", pageId);
         model.setViewName("SimpleTableView2");
 
         return model;

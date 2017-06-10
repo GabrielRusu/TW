@@ -67,11 +67,11 @@
 
                 <div id="view" style="background: transparent;">
                     <% Integer pageId = (Integer) request.getAttribute("pageId"); %>
-                    <a href="/viewVillage/<%=pageId-10%>"> << </a>
-                    <a href="/viewVillage/<%=pageId-1%>"> < </a>
-                    <a href="/viewVillage/<%=pageId%>"> <%=pageId%> </a>
-                    <a href="/viewVillage/<%=pageId+1%>"> > </a>
-                    <a href="/viewVillage/<%=pageId+10%>"> >> </a>
+                    <a href="/viewEarthquake/<%=pageId-10%>"> << </a>
+                    <a href="/viewEarthquake/<%=pageId-1%>"> < </a>
+                    <a href="/viewEarthquake/<%=pageId%>"> <%=pageId%> </a>
+                    <a href="/viewEarthquake/<%=pageId+1%>"> > </a>
+                    <a href="/viewEarthquake/<%=pageId+10%>"> >> </a>
                 </div>
 
             </div>
