@@ -60,8 +60,15 @@ public class OrganisationDAOImpl implements OrganisationDAO{
     }
 
     @Override
-    public List<Organisation> list() {
-        String sql = "SELECT * FROM ORGANISATIONS";
+    public List<Organisation> list(Integer pageId,int total) {
+        String sql = "SELECT * FROM "+
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "select * from ORGANISATIONS " +
+                " ) a " +
+                " where rownum < "  +((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1)* total)+1);
         List<Organisation> listOrganisation = jdbcTemplate.query(sql, new RowMapper<Organisation>() {
 
             @Override

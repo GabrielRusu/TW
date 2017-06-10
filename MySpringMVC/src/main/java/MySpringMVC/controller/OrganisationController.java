@@ -5,6 +5,7 @@ import MySpringMVC.model.Organisation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,10 +19,17 @@ public class OrganisationController {
     @Autowired
     private OrganisationDAO OrganisationDAO;
 
-    @RequestMapping(value = "/viewOrganisation")
-    public ModelAndView listOrganisation(ModelAndView model) throws IOException {
-        List<Organisation> listOrganisation = OrganisationDAO.list();
+    @RequestMapping(value = "/viewOrganisation/{pageId}")
+    public ModelAndView listOrganisation(ModelAndView model,@PathVariable Integer pageId) throws IOException {
+        int total = 50;
+        if(pageId == 1){}
+        else {
+            pageId = (pageId - 1) * total + 1;
+        }
+        List<Organisation> listOrganisation = OrganisationDAO.list(pageId, total);
+        model.addObject("pageId", pageId);
         model.addObject("listOrganisation", listOrganisation);
+        model.addObject("pageId", pageId);
         model.setViewName("OrganisationView");
 
         return model;

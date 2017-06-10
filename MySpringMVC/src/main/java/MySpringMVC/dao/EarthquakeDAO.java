@@ -12,5 +12,5 @@ public interface EarthquakeDAO {
 
     public Earthquake get(int id);
 
-    public List<Earthquake> list();
+    public List<Earthquake> list(Integer pageId,int total);
 }

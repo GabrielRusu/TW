@@ -23,13 +23,20 @@ public class SimpleTableViewDAOImpl {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    public List<PopStatistics> list() {
-        String sql = "SELECT d.NAME AS name, SUM(p.MALE_POP + p.FEM_POP) AS population, " +
+    public List<PopStatistics> list(Integer pageId, int total) {
+        String sql = "SELECT * FROM " +
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "SELECT d.NAME AS name, SUM(p.MALE_POP + p.FEM_POP) AS population, " +
                 "(da.MALE_DEATH + da.FEM_DEATH) AS dead, (da.MALE_INJURED + da.FEM_INJURED) AS injured " +
                 "FROM DAMAGES da JOIN DISTRICTS d ON da.DIS_ID = d.DIS_ID " +
                 "JOIN POPULATION p ON (d.DIS_ID = p.DIS_ID) " +
                 "GROUP BY d.NAME, da.MALE_DEATH, da.FEM_DEATH, da.MALE_INJURED, da.FEM_INJURED " +
-                "ORDER BY d.NAME ";
+                "ORDER BY d.NAME " +
+                " ) a " +
+                " where rownum < " + ((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1) * total) + 1);
 
         List<PopStatistics> listPopStatistics = jdbcTemplate.query(sql, new RowMapper<PopStatistics>() {
 
@@ -48,12 +55,20 @@ public class SimpleTableViewDAOImpl {
         return listPopStatistics;
     }
 
-    public List<ProjectActivity> list2() {
-        String sql = "SELECT c.NAME AS cName, d.NAME AS dName, m.NAME AS mName, " +
+    public List<ProjectActivity> list2(Integer pageId, int total) {
+        String sql = "SELECT * FROM " +
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "SELECT c.NAME AS cName, d.NAME AS dName, m.NAME AS mName, " +
                 "  ACTIVITY_TYPE AS activity, ITEM, TOTAL, UNIT " +
                 "  FROM PROJECTS p JOIN CLUSTERS c ON (p.CLUS_ID = c.CLUS_ID) " +
                 "  JOIN DISTRICTS d ON (d.DIS_ID = p.DIS_ID) " +
-                "  JOIN MUNICIPALITIES m ON (m.MUN_ID = p.MUN_ID)";
+                "  JOIN MUNICIPALITIES m ON (m.MUN_ID = p.MUN_ID)" +
+                "  ORDER BY c.NAME " +
+                " ) a " +
+                " where rownum < " + ((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1) * total) + 1);
 
         List<ProjectActivity> listPopStatistics = jdbcTemplate.query(sql, new RowMapper<ProjectActivity>() {
 
@@ -74,6 +89,6 @@ public class SimpleTableViewDAOImpl {
 
         return listPopStatistics;
     }
-    
 
 }
+

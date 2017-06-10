@@ -5,6 +5,7 @@ import MySpringMVC.model.Earthquake;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,10 +20,16 @@ public class EarthquakeController {
     @Autowired
     private EarthquakeDAO EarthquakeDAO;
 
-    @RequestMapping(value = "/viewEarthquake")
-    public ModelAndView listEarthquake(ModelAndView model) throws IOException {
-        List<Earthquake> listEarthquake = EarthquakeDAO.list();
+    @RequestMapping(value = "/viewEarthquake/{pageId}")
+    public ModelAndView listEarthquake(ModelAndView model,@PathVariable Integer pageId) throws IOException {
+        int total = 50;
+        if(pageId == 1){}
+        else {
+            pageId = (pageId - 1) * total + 1;
+        }
+        List<Earthquake> listEarthquake = EarthquakeDAO.list(pageId, total);
         model.addObject("listEarthquake", listEarthquake);
+        model.addObject("pageId", pageId);
         model.setViewName("EarthquakeView");
 
         return model;

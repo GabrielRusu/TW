@@ -41,8 +41,15 @@ public class ClusterDAOImpl implements ClusterDAO {
     }
 
     @Override
-    public List<Cluster> list() {
-        String sql = "SELECT * FROM Clusters ORDER BY CLUS_ID";
+    public List<Cluster> list(Integer pageId,int total) {
+        String sql =  "SELECT * FROM "+
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "select * from CLUSTERS " +
+                " ) a " +
+                " where rownum < "  +((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1)* total)+1);
         List<Cluster> listCluster = jdbcTemplate.query(sql, new RowMapper<Cluster>() {
 
             @Override

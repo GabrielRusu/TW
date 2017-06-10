@@ -6,6 +6,7 @@ import MySpringMVC.model.Municipality;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,10 +22,16 @@ public class MunicipalityController {
     @Autowired
     private MunicipalityDAO MunicipalityDAO;
 
-    @RequestMapping(value = "/viewMunicipality")
-    public ModelAndView listMunicipality(ModelAndView model) throws IOException {
-        List<Municipality> listMunicipality = MunicipalityDAO.list();
+    @RequestMapping(value = "/viewMunicipality/{pageId}")
+    public ModelAndView listMunicipality(ModelAndView model,@PathVariable Integer pageId) throws IOException {
+        int total = 50;
+        if(pageId == 1){}
+        else {
+            pageId = (pageId - 1) * total + 1;
+        }
+        List<Municipality> listMunicipality = MunicipalityDAO.list(pageId, total);
         model.addObject("listMunicipality", listMunicipality);
+        model.addObject("pageId", pageId);
         model.setViewName("MunicipalityView");
 
         return model;

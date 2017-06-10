@@ -13,5 +13,5 @@ public interface OrganisationDAO {
 
     public Organisation get(int id);
 
-    public List<Organisation> list();
+    public List<Organisation> list(Integer pageId,int total);
 }

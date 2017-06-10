@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,10 +22,16 @@ public class DistrictController {
     @Autowired
     private DistrictDAO districtDAO;
 
-    @RequestMapping(value = "/viewDistrict")
-    public ModelAndView listDistrict(ModelAndView model) throws IOException {
-        List<District> listDistrict = districtDAO.list();
+    @RequestMapping(value = "/viewDistrict/{pageId}")
+    public ModelAndView listDistrict(ModelAndView model,@PathVariable Integer pageId) throws IOException {
+        int total = 50;
+        if(pageId == 1){}
+        else {
+            pageId = (pageId - 1) * total + 1;
+        }
+        List<District> listDistrict = districtDAO.list(pageId, total);
         model.addObject("listDistrict", listDistrict);
+        model.addObject("pageId", pageId);
         model.setViewName("DistrictView");
 
         return model;

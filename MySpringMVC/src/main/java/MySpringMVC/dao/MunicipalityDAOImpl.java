@@ -60,8 +60,15 @@ public class MunicipalityDAOImpl implements MunicipalityDAO {
     }
 
     @Override
-    public List<Municipality> list() {
-        String sql = "SELECT * FROM Municipalities order by name";
+    public List<Municipality> list(Integer pageId,int total) {
+        String sql = "SELECT * FROM "+
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "select * from MUNICIPALITIES " +
+                " ) a " +
+                " where rownum < "  +((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1)* total)+1);
         List<Municipality> listMunicipality = jdbcTemplate.query(sql, new RowMapper<Municipality>() {
 
             @Override

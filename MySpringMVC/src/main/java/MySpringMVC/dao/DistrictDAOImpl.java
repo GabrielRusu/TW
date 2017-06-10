@@ -41,8 +41,15 @@ public class DistrictDAOImpl implements DistrictDAO {
     }
 
     @Override
-    public List<District> list() {
-        String sql = "SELECT * FROM districts order by name";
+    public List<District> list(Integer pageId,int total) {
+        String sql = "SELECT * FROM "+
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "select * from DISTRICTS " +
+                " ) a " +
+                " where rownum < "  +((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1)* total)+1);
         List<District> listDistrict = jdbcTemplate.query(sql, new RowMapper<District>() {
 
             @Override
