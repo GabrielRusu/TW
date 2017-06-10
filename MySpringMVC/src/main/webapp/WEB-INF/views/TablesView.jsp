@@ -30,12 +30,14 @@
             <div class="article-intro">
 
                 <h2>Modifica tabelele</h2>
+                <div id="view" style="background: transparent;"><a href="/updateChart">UPDATE CHART</a></div>
+                <div id="view" style="background: transparent;"><a href="/updateGraph">UPDATE GRAPH</a></div>
 
                 <table>
                     <tr>
                         <td><h3> Population </h3>
                             <p> <h4> Datele despre fiecare municipiu in parte sunt in acest tabel,
-                            cu date despre populatie: numar de oameni, gospodarii si densitatea populatiei</h4> </p>
+                                cu date despre populatie: numar de oameni, gospodarii si densitatea populatiei</h4> </p>
                             <div id="view" style="background: transparent;">
                                 <a href="/viewPopulation">GO TO</a>
                                 <a href="/updateTables">UPDATE</a>
@@ -110,3 +112,4 @@
 
 </body>
 </html>
+

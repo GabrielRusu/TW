@@ -6,12 +6,9 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
-import MySpringMVC.model.District;
 import MySpringMVC.model.PopStatistics;
 import MySpringMVC.model.ProjectActivity;
 

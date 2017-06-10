@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="container">
-                    <center><img src="../../resources/images/graph.png" alt="Graph example"></center>
+                    <center><img src="../../resources/images/output_chart.png" alt="Graph example"></center>
                 </div>
 
                 <h3>Graph</h3>

@@ -38,34 +38,9 @@
                     <div id="chart_div"></div>
                 </div>
 
-                <script>
-                    google.charts.load('current', {'packages': ['corechart']});
-
-                    google.charts.setOnLoadCallback(drawChart);
-
-                    function drawChart() {
-
-                        var data = new google.visualization.DataTable();
-                        data.addColumn('string', 'Topping');
-                        data.addColumn('number', 'Slices');
-                        data.addRows([
-                            ['Kathmandu', 3],
-                            ['Taluka', 1],
-                            ['Khandanpur', 1],
-                            ['Hetauda', 1],
-                            ['Bidur', 2]
-                        ]);
-
-                        var options = {
-                            'title': 'Affected zones',
-                            'width': "70%",
-                            'height': "60%"
-                        };
-
-                        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-                        chart.draw(data, options);
-                    }
-                </script>
+                <div class="container">
+                    <center><img src="../../resources/images/Pie_Chart.jpeg" alt="Chart"></center>
+                </div>
 
                 <h3>Chart</h3>
                 <p>
