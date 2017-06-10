@@ -10,5 +10,5 @@ public interface ClusterDAO {
 
     public Cluster get(int id);
 
-    public List<Cluster> list();
+    public List<Cluster> list(Integer pageId,int total);
 }

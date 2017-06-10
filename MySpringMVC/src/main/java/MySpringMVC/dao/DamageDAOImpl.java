@@ -71,8 +71,15 @@ public class DamageDAOImpl implements DamageDAO {
     }
 
     @Override
-    public List<Damage> list() {
-        String sql = "SELECT * FROM DAMAGES";
+    public List<Damage> list(Integer pageId,int total) {
+        String sql = "SELECT * FROM "+
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "select * from DAMAGES " +
+                " ) a " +
+                " where rownum < "  +((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1)* total)+1);
         List<Damage> listDamage = jdbcTemplate.query(sql, new RowMapper<Damage>() {
 
             @Override

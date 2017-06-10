@@ -172,7 +172,7 @@ table td {
 }
 
 .article {
-    min-height: 100%;
+    min-height: 700px;
     background: url(images/article.png);
     overflow: hidden;
 }
@@ -195,7 +195,7 @@ table td {
 }
 
 .article-intro {
-    min-height: 100%;
+    min-height: 700px;
     background: none;
     padding: 3em;
     overflow: hidden;
@@ -207,7 +207,7 @@ table td {
     }
 
     .article .article-intro{
-        height: 600px;
+        min-height: 700px;
     }
 
     #header {
@@ -254,7 +254,7 @@ table td {
     }
 
     .article .article-intro{
-        height: 500px;
+        min-height: 570px;
     }
 
     #header {
@@ -301,7 +301,7 @@ table td {
     }
 
     .article .article-intro{
-        height: 450px;
+        height: 480px;
     }
 
     #header {
@@ -348,7 +348,7 @@ table td {
     }
 
     .article .article-intro{
-        height: 350px;
+        height: 400px;
     }
 
     #header {
@@ -395,7 +395,7 @@ table td {
     }
 
     .article .article-intro{
-        height: 170px;
+        height: 190px;
     }
 
     #header {

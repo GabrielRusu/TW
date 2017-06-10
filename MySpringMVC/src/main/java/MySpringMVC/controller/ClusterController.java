@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,9 +22,15 @@ public class ClusterController {
     @Autowired
     private ClusterDAO ClusterDAO;
 
-    @RequestMapping(value = "/viewCluster")
-    public ModelAndView listCluster(ModelAndView model) throws IOException {
-        List<Cluster> listCluster = ClusterDAO.list();
+    @RequestMapping(value = "/viewCluster/{pageId}")
+    public ModelAndView listCluster(ModelAndView model,@PathVariable Integer pageId) throws IOException {
+        int total = 50;
+        if(pageId == 1){}
+        else {
+            pageId = (pageId - 1) * total + 1;
+        }
+        List<Cluster> listCluster = ClusterDAO.list(pageId, total);
+        model.addObject("pageId", pageId);
         model.addObject("listCluster", listCluster);
         model.setViewName("ClusterView");
 

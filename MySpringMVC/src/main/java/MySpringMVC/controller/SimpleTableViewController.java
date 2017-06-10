@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -18,22 +19,35 @@ public class SimpleTableViewController {
     @Autowired
     private SimpleTableViewDAOImpl simpleTableViewDAO;
 
-    @RequestMapping(value = "/viewSimpleTable")
-    public ModelAndView listSimpleTable(ModelAndView model) throws IOException {
-        List<PopStatistics> simpleTableList = simpleTableViewDAO.list();
+    @RequestMapping(value = "/viewSimpleTable/{pageId}")
+    public ModelAndView listSimpleTable(ModelAndView model, @PathVariable Integer pageId) throws IOException {
+        int total = 50;
+        if(pageId == 1){}
+        else{
+            pageId = (pageId - 1)* total +1;
+        }
+        List<PopStatistics> simpleTableList = simpleTableViewDAO.list(pageId, total);
         model.addObject("listSimpleTable", simpleTableList);
+        model.addObject("pageId", pageId);
         model.setViewName("SimpleTableView");
 
         return model;
     }
 
-    @RequestMapping(value = "/viewSimpleTable2")
-    public ModelAndView listSimpleTable2(ModelAndView model) throws IOException {
-        List<ProjectActivity> simpleTableList = simpleTableViewDAO.list2();
+    @RequestMapping(value = "/viewSimpleTable2/{pageId}")
+    public ModelAndView listSimpleTable2(ModelAndView model, @PathVariable Integer pageId) throws IOException {
+        int total = 50;
+        if(pageId == 1){}
+        else{
+            pageId = (pageId - 1)* total +1;
+        }
+        List<ProjectActivity> simpleTableList = simpleTableViewDAO.list2(pageId, total);
         model.addObject("listSimpleTable2", simpleTableList);
+        model.addObject("pageId", pageId);
         model.setViewName("SimpleTableView2");
 
         return model;
     }
 
 }
+

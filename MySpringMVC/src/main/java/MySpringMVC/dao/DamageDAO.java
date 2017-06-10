@@ -15,5 +15,5 @@ public interface DamageDAO {
 
     public Damage get(int id);
 
-    public List<Damage> list();
+    public List<Damage> list(Integer pageId,int total);
 }

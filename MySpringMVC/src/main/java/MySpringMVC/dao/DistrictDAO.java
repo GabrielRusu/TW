@@ -12,5 +12,5 @@ public interface DistrictDAO {
 
     public District get(int id);
 
-    public List<District> list();
+    public List<District> list(Integer pageId,int total);
 }

@@ -12,5 +12,5 @@ public interface MunicipalityDAO {
 
     public Municipality get(int id);
 
-    public List<Municipality> list();
+    public List<Municipality> list(Integer pageId,int total);
 }

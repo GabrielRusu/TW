@@ -70,8 +70,15 @@ public class EarthquakeDAOImpl implements EarthquakeDAO {
     }
 
     @Override
-    public List<Earthquake> list() {
-        String sql = "SELECT * FROM EARTHQUAKES ORDER BY HAZARD DESC ";
+    public List<Earthquake> list(Integer pageId,int total) {
+        String sql = "SELECT * FROM "+
+                " ( "
+                + "select a.*, rownum r__ FROM" +
+                "( "
+                + "select * from EARTHQUAKES " +
+                " ) a " +
+                " where rownum < "  +((pageId * total) + 1) +
+                ") WHERE r__ >= " + (((pageId - 1)* total)+1);
         List<Earthquake> listEarthquake = jdbcTemplate.query(sql, new RowMapper<Earthquake>() {
 
             @Override

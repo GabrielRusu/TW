@@ -61,6 +61,8 @@ public class TablesDAOImpl {
         String separator = ",";
         BufferedReader br = null;
 
+        System.out.println(" >> Updating table Population :: ");
+
         String sql = "DELETE FROM POPULATION WHERE DIS_ID != 0";
         jdbcTemplate.update(sql);
 
@@ -81,6 +83,8 @@ public class TablesDAOImpl {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        System.out.println(" >> Table Population updated :: ");
 
     }
 
@@ -108,11 +112,47 @@ public class TablesDAOImpl {
         }
 
         importPopulation(path + "\\population.csv");
-
     }
 
-    @Scheduled(cron = "*/5 * * * * ?")
-    void checkUpdate() {
-        System.out.println("Method executed at every 5 seconds. Current time is :: "+ new Date());
+    @Scheduled(cron = "0 0 0 * * *")
+    void checkUpdate() throws IOException, UnsupportedEncodingException, FileNotFoundException {
+
+        String url = "https://data.humdata.org/dataset/e71f53d9-2339-4df5-b76e-397957ec65dc/resource/1f6474a1-a0c3-4646-8f16-b57a4f5411cf/download/npl-popt-adm4-2011-wfp.csv";
+        File f = new File(TablesDAOImpl.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+        String path;
+
+        for (int i = 0; i < 4; i++) {
+            f = f.getParentFile();
+        }
+        path = f.getAbsolutePath() + "\\src\\temp";
+        path = URLDecoder.decode(path, "UTF-8");
+
+        retrieveFile(url, path + "\\population-new.csv");
+
+        System.out.println(" >> Checking if update is available :: ");
+
+        String file1 = path + "\\population.csv";
+        String file2 = path + "\\population-new.csv";
+
+        BufferedReader bfr1 = new BufferedReader(new FileReader(file1));
+        BufferedReader bfr2 = new BufferedReader(new FileReader(file2));
+
+        String one, two;
+
+        while (((one = bfr1.readLine()) != null) && ((two = bfr2.readLine()) != null)) {
+            if (one.compareTo(two) != 0) {
+                File fileOne = new File(file1);
+                File fileTwo = new File(file2);
+
+                fileOne.delete();
+                fileTwo.renameTo(fileOne);
+
+                System.out.println(" >> Update found for Table Population :: ");
+
+                importPopulation(file1);
+                return;
+            }
+        }
+
     }
 }
