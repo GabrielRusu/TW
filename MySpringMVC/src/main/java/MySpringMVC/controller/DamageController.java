@@ -25,13 +25,15 @@ public class DamageController {
     @RequestMapping(value = "/viewDamage/{pageId}")
     public ModelAndView listDamage(ModelAndView model,@PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){}
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
         else {
             pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<Damage> listDamage = DamageDAO.list(pageId, total);
         model.addObject("listDamage", listDamage);
-        model.addObject("pageId", pageId);
         model.setViewName("DamageView");
 
         return model;
@@ -48,14 +50,14 @@ public class DamageController {
     @RequestMapping(value = "/saveDamage", method = RequestMethod.POST)
     public ModelAndView saveDamage(@ModelAttribute Damage damage) {
         DamageDAO.saveOrUpdate(damage);
-        return new ModelAndView("redirect:/viewDamage");
+        return new ModelAndView("redirect:/viewDamage/1");
     }
 
     @RequestMapping(value = "/deleteDamage", method = RequestMethod.GET)
     public ModelAndView deleteDamage(HttpServletRequest request) {
         int dis_id = Integer.parseInt(request.getParameter("dis_id"));
         DamageDAO.delete(dis_id);
-        return new ModelAndView("redirect:/viewDamage");
+        return new ModelAndView("redirect:/viewDamage/1");
     }
 
     @RequestMapping(value = "/editDamage", method = RequestMethod.GET)

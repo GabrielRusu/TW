@@ -25,12 +25,14 @@ public class ClusterController {
     @RequestMapping(value = "/viewCluster/{pageId}")
     public ModelAndView listCluster(ModelAndView model,@PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){}
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
         else {
             pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<Cluster> listCluster = ClusterDAO.list(pageId, total);
-        model.addObject("pageId", pageId);
         model.addObject("listCluster", listCluster);
         model.setViewName("ClusterView");
 
@@ -48,14 +50,14 @@ public class ClusterController {
     @RequestMapping(value = "/saveCluster", method = RequestMethod.POST)
     public ModelAndView saveCluster(@ModelAttribute Cluster Cluster) {
         ClusterDAO.saveOrUpdate(Cluster);
-        return new ModelAndView("redirect:/viewCluster");
+        return new ModelAndView("redirect:/viewCluster/1");
     }
 
     @RequestMapping(value = "/deleteCluster", method = RequestMethod.GET)
     public ModelAndView deleteCluster(HttpServletRequest request) {
         int clus_id = Integer.parseInt(request.getParameter("id"));
         ClusterDAO.delete(clus_id);
-        return new ModelAndView("redirect:/viewCluster");
+        return new ModelAndView("redirect:/viewCluster/1");
     }
 
     @RequestMapping(value = "/editCluster", method = RequestMethod.GET)

@@ -159,6 +159,7 @@ div#chart-div {
 }
 
 #main {
+    min-height: 600px;
     background: url(images/background.png) repeat-x;
     background-attachment: fixed;
     position: relative;
@@ -168,6 +169,7 @@ div#chart-div {
 }
 
 #main-app {
+    min-height: 600px;
     background: url(images/background.png) repeat-x;
     background-attachment: fixed;
     position: relative;

@@ -21,6 +21,18 @@ public class TablesController {
         return model;
     }
 
+    @RequestMapping(value = "/updateChart", method = RequestMethod.GET)
+    public ModelAndView updateChart() {
+        tablesDAO.createChart();
+        return new ModelAndView("redirect:/viewTables");
+    }
+
+    @RequestMapping(value = "/updateChart2", method = RequestMethod.GET)
+    public ModelAndView updateChart2() {
+        tablesDAO.createChart2();
+        return new ModelAndView("redirect:/viewTables");
+    }
+
     @RequestMapping(value = "/updateTables", method = RequestMethod.GET)
     public ModelAndView updateTables() {
         tablesDAO.updatePopulation();

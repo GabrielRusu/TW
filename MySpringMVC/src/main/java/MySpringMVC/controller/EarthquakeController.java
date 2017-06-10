@@ -23,13 +23,15 @@ public class EarthquakeController {
     @RequestMapping(value = "/viewEarthquake/{pageId}")
     public ModelAndView listEarthquake(ModelAndView model,@PathVariable Integer pageId) throws IOException {
         int total = 50;
-        if(pageId == 1){}
+        if(pageId == 1){
+            model.addObject("pageId", pageId);
+        }
         else {
             pageId = (pageId - 1) * total + 1;
+            model.addObject("pageId", (pageId/total)+1);
         }
         List<Earthquake> listEarthquake = EarthquakeDAO.list(pageId, total);
         model.addObject("listEarthquake", listEarthquake);
-        model.addObject("pageId", pageId);
         model.setViewName("EarthquakeView");
 
         return model;
@@ -46,14 +48,14 @@ public class EarthquakeController {
     @RequestMapping(value = "/saveEarthquake", method = RequestMethod.POST)
     public ModelAndView saveEarthquake(@ModelAttribute Earthquake Earthquake) {
         EarthquakeDAO.saveOrUpdate(Earthquake);
-        return new ModelAndView("redirect:/viewEarthquake");
+        return new ModelAndView("redirect:/viewEarthquake/1");
     }
 
     @RequestMapping(value = "/deleteEarthquake", method = RequestMethod.GET)
     public ModelAndView deleteEarthquake(HttpServletRequest request) {
         int quake_id = Integer.parseInt(request.getParameter("id"));
         EarthquakeDAO.delete(quake_id);
-        return new ModelAndView("redirect:/viewEarthquake");
+        return new ModelAndView("redirect:/viewEarthquake/1");
     }
 
     @RequestMapping(value = "/editEarthquake", method = RequestMethod.GET)
